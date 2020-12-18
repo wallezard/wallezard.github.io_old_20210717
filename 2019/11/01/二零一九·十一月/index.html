@@ -1,37 +1,836 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
 
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
 
-{% block page_class %}page-post-detail{% endblock %}
+  
 
 
-{% block content %}
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo,加密">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="less is more">
+<meta name="keywords" content="Hexo,加密">
+<meta property="og:type" content="article">
+<meta property="og:title" content="二零一九·十一月">
+<meta property="og:url" content="https://duowangwill.github.io/2019/11/01/二零一九·十一月/index.html">
+<meta property="og:site_name" content="多忘斋">
+<meta property="og:description" content="less is more">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-07-21T10:12:30.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="二零一九·十一月">
+<meta name="twitter:description" content="less is more">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://duowangwill.github.io/2019/11/01/二零一九·十一月/">
+
+
+
+
+
+  <title>二零一九·十一月 | 多忘斋</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">多忘斋</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">less is more</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+<script>
+    (function(){
+        if('201911'){
+            if (prompt('请输入文章密码') !== '201911'){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
 
   <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://duowangwill.github.io/2019/11/01/二零一九·十一月/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="奔跑的瓦力">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="多忘斋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">二零一九·十一月</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-01T18:00:14+08:00">
+                2019-11-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/博客/" itemprop="url" rel="index">
+                    <span itemprop="name">博客</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+              <div class="post-description">
+                  less is more
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>11.1  周五   第23天  农历十月初六</p>
+<p>后台接口写完了.<br>后台接口写完了.<br>你确定发布到测试环境了?<br>张洋, 你谈过女朋友吗? 这是看不起人是怎么着?<br>到家快12点了, 掉点儿了. 周姑娘发微信说闹铃那句诗,让她想起我来了. </p>
+<p>11.2  周六   第24天  农历十月初七</p>
+<p>周六是没有上午的, 昨夜下雨了. 已经记不起是第几场雨了.<br>上午起床是甘蔗到货了. 这次的质量很差啊, 有没有甘蔗刀….<br>kindle的保护套也是不满意, 退货.<br>就开始着手收拾东西. 下午洗衣服. 再洗衣服. 终于把该洗的都洗了.<br>下午6点多睡了会儿. 醒了8点多了. 看s9, 输了. 心情不舒服. theShy打的不好.<br>最近几天做了些噩梦什么的.<br>搞了会儿代码, 家里是4G连不到数据库.<br>喜欢的人没有, 代码没搞定, 明天是北马无法参加. 心情有些压抑啊. </p>
+<p>11.3  周日   第25天  农历十月初八</p>
+<p>临近中午起床, 打了几把王者荣耀. 反应挺慢的.<br>7点去烫发. 2个小时才好. 心情不错. 几十年的头发终于蓬松起来了.<br>淘宝买的那个白色外套是假的….. 才发现. 想去实体店买, 没空了.<br>白天一直犹豫要不要去wewWork干活, 还是没去. 懒了.<br>好久好久没有长跑了. 下午收拾衣物, 有些感伤. 就是挺不开心的.<br>无精打采的一个状态.</p>
+<p>11.4  周一   第26天  农历十月初八</p>
+<p>晚上做了个美梦, 希望美梦能成真吧. 不知道何时了.<br>上午踩点到公司. 喝一瓶魔爪.<br>下午耿来电, 说吃饭. 我真顾不上的.<br>现在是7: 20 终于部署上去了.<br>现在是9: 11 划水了很久了. </p>
+<p>剩下的就是新打包平台和新运营平台两个了,暂时.<br>头晕晕的, 缺觉. 情绪内耗太多了.<br>现在已经是11月了, 10月过的好快啊. </p>
+<p>明天就是动态路由加载和新打包平台的数据联调和bug.</p>
+<p>11.5  周二   第27天  农历十月初九</p>
+<p>早起就喝了一瓶魔爪去上班. 路上很困. 迟到半小时.<br>状态的话, 打20分吧. 至少心态还没崩的很溃.<br>发现旁边的同事也在学vue. 全员抢饭碗嘛这是?<br>中午没休息没吃饭. 直到此刻才终于把官网协议修改的问题搞定了.<br>中间也没休息, 而且同事还一边问vue, bug还一直找我, 态度让我很不舒服.<br>明天要开周会了. 现在是运营平台的bug和打包平台的接口调试.</p>
+<p>现在是6: 52 出去买了盒小苏. 抽了根烟. 有点累, 有点喘不过气来.<br>现在是8: 51 刚刚穿过点气来. 改了新开页面跳转的问题.<br>出去抽根烟, 然后回来继续看下keep alive.<br>本来刚刚有了点状态, 9: 23 的时候小刚来了电话. 聊了半个多小时.<br>现在 10: 18 楼上装修好他妈吵啊. 出去抽根烟, 回来抄写后回家看看吧.</p>
+<p>11.6  周三   第28天  农历十月初十</p>
+<p>昨晚晚睡. 魔爪续命. 认识金兰？<br>冯介绍一个同学认识, 算是学而思的云同事了. 下午接口调通, 算是送了一口气.<br>然后后半段, 几乎就是心思不在代码上. 晚上她回复我,聊了个把小时, 没有工作.</p>
+<p>11.7  周四   第29天  农历十月初十一</p>
+<p>魔爪 +1  继续开会, 任务计划. 看到视频讲课的模样……<br>从现在开始, 问题50元/次. 冯看了说的很严重, 我是觉着不回了.<br>丘问我慕课网密码, 捎带说两句她的事儿. 拒绝耿的吃饭.<br>晚上看打包平台, 拖拽. 下午是一直在看返回之前页面的问题.<br>在公司通宵. 看ps4和switch游戏机. </p>
+<p>11.8  周五   第30天  农历十月十二</p>
+<p>魔爪 +1<br>和黄斌旭说好周六去找他. 谢天谢地和自己的努力. 打包平台的接口联调, 今天需要确认好的.<br>来工资了. 刚用书店的WiFi测试了下vpn. 能用. 明天不要出差错.<br>退货又买的白色安踏卫衣, 又是假的? 明天去实体店看下吧.现在头还是晕乎乎的.<br>你的结构没变吧, 我写了好多爬虫. 贪黑15次. 下午没有把时间利用起来.<br>隔一会儿抽烟隔一会儿抽烟. 晚上其实也没懂多少进度. 倒地铁停运了出来单车, 走错方向.<br>在北师大门口, 打车1点多才到家. 松松没在. </p>
+<p>11.9  周六   第31天  农历十月十三</p>
+<p>临近中午起床取快递. 甘蔗到了, 然后甘蔗刀也到了. 去安踏店.<br>预料到在这家衣服店, 要耽搁很久了. 安踏那件卫衣, 里面的颗粒绒,确实不一样.<br>继续去看衣服, 买了9件衣服, 7件卫衣, 一件风衣, 一件棒球服.<br>已经2点多了, 3点多到家, 收拾下. 打车去到黄斌旭家, 4点之前到.<br>出门时候, 阴天了.<br>开始解决问题, 从4点多到晚上快8点了. 外面下雨了. 他家里挺冷的.<br>叫了外卖吃, 看着他写代码好流畅啊. 我现在比以前有进步了.<br>算是终于解决了, 拖拽最简单的那个问题.<br>然后他说, 一会儿要打游戏了, 要感激解决, 不行啊, 你要提高效率, 不能磨蹭.<br>你太磨蹭了, 喝了瓶红牛撑着, 后期我明显感觉头疼很累了.<br>知乎网友借钱……算了吧. 晚上到家也没敲代码, 太累了. 几点睡着的也忘了. </p>
+<p>11.10  周日   第32天  农历十月十四  +  11.11  周一   第33天  农历十月十五</p>
+<p>还没起床醒了的时候, 太阳是照在脸上的. 起床, 太阳偏移, 看下手机11点多了.<br>起床抽烟喝茶, 然后收拾下衣物. 12点多. 适配器忘在他加了. 他下午要打游戏.<br>确实不能麻烦人家了, 中午去吃了炒饭, 回家打了3局王者, 就到3点了, 穿上大衣.<br>背上背包出发, 4点多到公司, 现在1个半小时过去了. 5: 24.<br>目前是:  1个半Bug, 还有打包平台的数据联调. 其实状态一般了.<br>过冬的衣服买了一些, 还差两件羽绒服, 两件卫衣吧.<br>还有两双鞋, 羽绒服清洗液, 内裤和枕巾. 强生香皂, 这些杂件了.<br>6: 23  1小时过去了, 进度基本没动多少, 有些累. 不在状态, 注意力不集中.<br>6小时过去了, 我为啥磨蹭了这么半天, 工作看板都没啥进度呢.<br>小米有陪品400, 网易700, 实体店衣服1900. 3000元过了一个双十一.<br>7点多去吃饭, 然后吃根糖葫芦, 然后回公司. 然后躺一会儿去二楼看比赛.<br>然后继续躺一会儿, 抽根烟. 然后在工位购物. 从10点多到现在1点多. 2个多小时.<br>都花在了购物上. 卧槽. 今天就是周一了啊. 不行, 太磨蹭了, 要用心专注啊.<br>搬到新办公地址的第二个通宵, 我爱编程, 爱写代码啊.<br>1: 56  很难受, 心态起伏太大了, 不够用心, 注意力不够集中.<br>最近工作忙的, 慢慢放下她了. 然后搬完忍不住看了下她动态, 还是心理不舒服.<br>还是会脑补, 这周末, 我好赶, 好久没有一个稍稍轻松的周末了. 还玩儿游戏个鬼啊.<br>回来, 抽烟歇会儿. 最近几天抽烟很勤. 半夜想起她, 觉得孤苦无助. 去买了一盒烟,<br>一瓶酸奶, 一罐黑卡6小时.天明之前来了状态, 看了动态加载路由, 配合黄斌旭的帮助,<br>有了思路. 思维活跃, 开始兴奋起来, 天亮了, 去听着歌吃早点.<br>然后回来, 实在太苦困, 椅子上眯了一会儿, 大家就都来上班了.</p>
+<p>通宵太累太困了, 欢哥问进度. 然后打包平台要部署, 动态路由还没搞定.<br>不过夜里算是搞定了一个小问题. 现在是晚上9: 51 太困了太累了. 不过感觉思维敏捷.<br>大问题搞定了才这样,还是说心思都在工作上呢?</p>
+<p>中午晚上正常吃饭. 临近中午kindle的皮套和清明上河图5 也发售了, 买了午休读.<br>还没去休息. 下午干活太累了, 不停出去抽烟. 效率慢, 办事儿还拖拉. </p>
+<p>加了一个清明上河图读书群, 接着下午偶尔出去抽烟, 也带着kindle读一会儿.<br>12小时就抽完了一盒烟. 真快. 然后工作进度, 项目依旧没有部署.<br>下午我爸来电话,说我奶奶半夜里从床上摔下来了. 现在一直昏迷不醒.<br>为奶奶祈福🙏. 希望老人家一辈子, 能再多活几年. </p>
+<p>到了晚上开始话多了, 跟实习生, 撤了将近半个多小时, 吃饭之前又跟小刚扯了十几分钟.<br>回到工位9点多了. 然后看会儿书, 记日记, 也没敲代码, 时间就过去了. </p>
+<p>进度仍旧是很落后啊.眼镜都快睁不开了. 就是自己不会照顾自己, 分不清轻重缓急.<br>要用心专注, 一门心思放在编程和代码上. 这个二手的kindle保护套手感真好.<br>虽然有点划痕, 有质感. 现在是10: 08. 见缝插针. 抄写3行. 就回家. 记得拿衣服.<br>昨天下午买炒饭, 听到了之前的那首迷途, 很不错. 重新品味下歌词, 很舒服. </p>
+<p>11.12  周二  第33天  农历十月十六(日期正确)</p>
+<p>昨晚看清密6, 3点多才睡. 迟到公司. 挺累的. 一天基本没敲代码.<br>下午绍楠帮着搞了nginx配置和部署, 临下班前终于好了.<br>我爸来电话, 奶奶去世了. 后天出殡, 要明天晚上到衡水.<br>晚上没走, 不过精力不够, 状态不在. 一直磨蹭到凌晨然后二楼躺着睡着了.<br>风很大很冷. 想起十一回去, 妈妈买了烤红薯, 让我给奶奶.<br>跟欢哥说了, 他第一反应是可以请丧假. 晚上状态很差的. 清密6 看了一半. </p>
+<p>11.13  周三  第34天  农历十月十七</p>
+<p>回衡水, 赶火车. 到家后到衡水学院, 买水卖糖葫芦买麻辣串.</p>
+<p>11.14  周四  第35天  农历十月十八</p>
+<p>回孤城, 出殡. 舅同去. 下午到家后, 宽带调通. </p>
+<p>11.15  周五  第36天  农历十月十九</p>
+<p>在家里, 晚上和爸爸聊天, 他要买手机. 和金兰聊天. 中午吃大米饭. </p>
+<p>11.16  周六  第37天  农历十月二十</p>
+<p>夜里下雨, 吵架. 踹电视. 早起吃汉堡包. 中午吃炖牛肉.</p>
+<p>11.17  周日  第37天  农历十月二十一</p>
+<p>早起吃煎饼. 中午吃烙饼. 下午爸爸从孤城回来, 聊天. 6点多开始该会儿代码.<br>然后晚上没吃饭. 10点多打车, 送我去车站. 天真冷. </p>
+<p>11.18  周一  第38天  农历十月二十二</p>
+<p>此刻是 周一 早上的  4: 53<br>3点到北京站, 3: 40 到公司. 过去1个小时了. 打了公司又冷又饿.带着半只鸡来是对的.<br>这一个小时主要是双十一买的鞋和衣服, 试了下. 发现丢了羽绒服洗衣夜.<br>此刻 5: 52  1个小时过去了,  也就是说还有3个小时的时间. 这个小时没理由耽误.<br>6: 06, 有些困了. 2个小时过去了. 还没开始敲代码. 晚上跟姥姥打电话, 然后搬着箱子回家.<br>11点多到家. 算是早了. 路上和金兰聊天. 到家了1点多关灯睡觉. </p>
+<p>11.19  周二  第39天  农历十月二十三</p>
+<p>今天真的没力气了. 昨晚没洗澡. 然后头发一周没洗了.<br>好像又开始抑郁了. 就是没精打采. 没力气. 连着喝了多少天的魔爪和红牛啊.<br>哎, 生存啊. 运气总是这样的. 打游戏, 晚上聊天. 临近2点才睡.</p>
+<p>11.20  周三  第40天  农历十月二十四</p>
+<p>总算松一口气了.</p>
+<p>11.21  周四  第41天  农历十月二十五</p>
+<p>忘了做了什么事情. </p>
+<p>11.22  周五  第42天  农历十月二十六</p>
+<p>下午头疼的受不了. 鼻炎还是脊椎炎,还是感冒什么导致的? 真的太难受了.</p>
+<p>11.23  周六  第43天  农历十月二十七</p>
+<p>阴天,风很大<br>中午一直擦洗羽绒服. 1个多小时. 还不如拿去干洗店去洗.<br>下午削甘蔗, 打游戏. 等着拿冰箱的人. 房东来找我, 去外边接应.<br>冰箱终于抬走. 还是挺累的. 晚上12点睡觉了就. 一天也没做什么.</p>
+<p>11.24  周日  第44天  农历十月二十八</p>
+<p>临近中午起床, 天气晴. 中午打游戏. 下午去买饭回来吃, 挺困的.<br>从2点睡到下午4点多. 感觉还是没有缓过来. 刷鞋. 17双鞋.<br>晚上松松回来. 聊天没开电脑. 日记和代码都没碰.  </p>
+<p>11.25  周一  第45天  农历十月二十九</p>
+<p>昨晚临近3点睡觉. 看金田一动画. 早上醒来喷鼻炎药. 上班, 迟到10分钟.<br>上午到了欢哥来找我, 更新看板, 终于上传资源ok了. 下午调试其他接口.<br>地铁路上, 金兰说,兄弟下班了嘛? 说个正事, 说要把家长家具电视送我.<br>我说好啊, 然后回宿舍. 聊会儿天. 临近1点睡觉. 很困了. </p>
+<p>11.26  周二  第46天  农历十月三十</p>
+<p>上午迟到10分钟, 中午外卖很晚才到. 感觉有些感冒啊.<br>有些冷, 有些困. 想睡觉. 中午为了等外卖, 都没好好休息.<br>手机出故障了. 接不到外卖电话. 现在是2: 37<br>上午京东快递折叠床的电话也没收到. 小米8 这个破手机啊.<br>现在和金兰聊天已经让我有些压力了, 因为聊天开始频繁起来了.<br>并没有太放松, 又开始患得患失. 随意啦. </p>
+<p>晚上大家一起团建去吃了299元以为的自助餐, 就在当年海底捞上下班那个路口附近.<br>现在9: 36了.</p>
+<p>11.27  周三  第47天  农历十一月初二</p>
+<p>最近一周稍稍轻松些, 真的有些不想动脑子了. 总是歇不够, 睡不够.<br>昨晚梦到爸爸累病了. 今天晚上没回家. 总之一天都很累, 中午躺着将睡未睡.<br>快11点, 她发消息来, 是健德门的地铁站. 聊到12点快1点. 随意就好.<br>另外, 珍惜就行. 晚上空调关了, 太他么冷了. </p>
+<p>11.28  周四  第48天  农历十一月初三</p>
+<p>一夜没怎么睡好. 早起聊两句. 然后中午午睡, 睡不够. 1天到现在还没休息呢.<br>挺累的, 腰椎这里不舒服. 下午喝茶, 然后到现在还没看进nodeJS去. </p>
+<p>虽然冲动永远比坚持容易, 宝贵的东西都需要很费心.<br>慢慢能翻越沙丘, 走出日落. </p>
+<p>下午浮躁, 踏不下心来. 看了下打卡统计, 竟然有2天的打卡忘了更新过来.<br>1号 2号 13号 14号 15号<br>8号 11号 13号 18号 29号(差1天)</p>
+<p>路上到家里聊天, 然后半夜睡不着觉, 半夜网易严选双十二买衣服,<br>好多衣服, 白菜价. 临近5点才睡着吧. </p>
+<p>11.29  周五  第49天  农历十一月初四</p>
+<p>早上醒来9点了, 迟到30分钟. 到了公司真的颈椎和腰椎脊椎, 三椎疼痛.<br>然后头疼, 喷鼻炎药. 然后中午没休息. 状态浮躁. 中午和她聊两句.<br>我发现sony电子纸 限制1年多了. 另外发现ipad的手写也很强大的.<br>下午看nodejs 一直静不下心来. 现在是5点半仍旧感觉头疼.</p>
+<p>缺觉, 想休息. 就是调整不过来这个状态.就在7点到8点50这段时间里.<br>我因为聊天去抽烟, 看sony Z5p 浪费了好多时间. 闲聊. 买了笔记本支架.<br>马上9点了, 外卖还没到呢. 吃了外卖nidiu一会儿现在9: 38了. 困, 头晕.<br>想马上睡觉. 太困了. 还是时间宝贵一些吧. 真的太累了.<br>从10月一到现在快50天了. 6.20入职 7 8 9 10 11 12 6个月了也就半年了.<br>她说下雪啦, 聊了几句. 晚上回家地铁上聊天. 然后淋着一头雪到家.</p>
+<p>11.30  周六  第50天  农历十一月初五</p>
+<p>一天没跟外界联系. 倒是卢帅和提子找我. 一个找我打乒乓球. 一个问我vue.<br>中午去北京银行办理业务. 下午回宿舍. 开电脑看了会儿node也没看下去.<br>一想我也忘了做了些什么.从6点开始躺着到晚上八九点吧, 感觉还是感冒湿气重引起的鼻炎. </p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/日记/" rel="tag"># 日记</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/10/24/人生错题本/" rel="next" title="二零一九·十月">
+                <i class="fa fa-chevron-left"></i> 二零一九·十月
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/12/01/二零一九·十二月/" rel="prev" title="二零一九·十二月">
+                二零一九·十二月 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
 
     <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+      
     </div>
   </div>
 
-{% endblock %}
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+          </div>
+          
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/uploads/avatar.png" alt="奔跑的瓦力">
+            
+              <p class="site-author-name" itemprop="name">奔跑的瓦力</p>
+              <p class="site-description motion-element" itemprop="description">简单即效率</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">53</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+    <div id="music163player">
+     <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="280" height="52" src="//music.163.com/outchain/player?type=2&id=444312&auto=1&height=32">
+     </iframe>
+    </div>
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">奔跑的瓦力</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count"></span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

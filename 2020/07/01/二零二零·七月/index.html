@@ -1,37 +1,807 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
 
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
 
-{% block page_class %}page-post-detail{% endblock %}
+  
 
 
-{% block content %}
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo,加密">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="less is more">
+<meta name="keywords" content="Hexo,加密">
+<meta property="og:type" content="article">
+<meta property="og:title" content="二零二零·七月">
+<meta property="og:url" content="https://duowangwill.github.io/2020/07/01/二零二零·七月/index.html">
+<meta property="og:site_name" content="多忘斋">
+<meta property="og:description" content="less is more">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-08-10T08:33:58.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="二零二零·七月">
+<meta name="twitter:description" content="less is more">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://duowangwill.github.io/2020/07/01/二零二零·七月/">
+
+
+
+
+
+  <title>二零二零·七月 | 多忘斋</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">多忘斋</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">less is more</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+<script>
+    (function(){
+        if('202007'){
+            if (prompt('请输入文章密码') !== '202007'){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
 
   <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://duowangwill.github.io/2020/07/01/二零二零·七月/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="奔跑的瓦力">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="多忘斋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">二零二零·七月</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-01T18:00:14+08:00">
+                2020-07-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/博客/" itemprop="url" rel="index">
+                    <span itemprop="name">博客</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+              <div class="post-description">
+                  less is more
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>7.7  </p>
+<p>电动车抛锚联系金兰。</p>
+<p>7.15  周三</p>
+<p>7.16  周四</p>
+<p>找巴赫姐聊天。</p>
+<p>7.17  周五</p>
+<p>在家办公做了一点工作。写这些年的经历。</p>
+<p>7.18  周六  阴雨的一天了。</p>
+<p>一直就是总结自己的一些事情。然后晚上佐佐来电话了。<br>聊了1个多小时。买的随养随摘泡水喝的薄荷到货了。</p>
+<p>7.19  周日</p>
+<p>这中午过了12点才起床。<br>下午看完一本书 佐贺的超级阿嬷。<br>晚上用switch玩儿文明。一直到过了快1点。<br>2点多才睡。</p>
+<p>7.20  周一</p>
+<p>2个小时 1200元。花了4000元了！ 再加4000元就可以买个电吉他。<br>周四有任务要组内分享NodeJS这个项目。<br>7点准时下班回家，晚上看Lol比赛。之后和知乎网友简单聊两句。<br>晚风穿过5楼的窗，吹得我竟有点平静。<br>忽然想到，去年奶奶去世前，我跟金兰认识，是一条线。<br>是不是奶奶临终惦记着爸爸，知道我爸爸为我娶媳妇儿发愁，才把金兰送来？<br>去年11.13号我请了丧假回家。到家那天，下午金兰发了一站图片。<br>秋天马路上的一棵树。 我拍了老家院子里的石榴树给她看。<br>不知道去世是个什么感觉，奶奶在那边还好么？</p>
+<p>7.21  周二</p>
+<p>今天很晒，中午和绍楠抽烟，聊了半天。锻炼真的很重要。<br>早起头疼，2点才睡。下午5点多才吃饭。</p>
+<p>7.22  周三</p>
+<p>午休去六道口，电动车还在。路上40分钟，电车就充满电了。<br>傍晚和两个南，一起聊了很难的事。抽了两根烟。到家11点多。<br>玩儿两局游戏，然后2点左右才睡觉。这几年这是怎么了呢？</p>
+<p>7.23  周四</p>
+<p>偶尔想起落落来。好姑娘。哈哈。<br>这几天状态有所回暖了。打王者荣耀。<br>觉着她是精致的利己主义者。看人也要全面。<br>这周回去不回去呢？ 有些累。想戒烟哈哈哈。<br>不会休息。今天喝了两瓶饮料了。下午4点组内分享技术。<br>硬是BB了40多分钟。今天可以不背电脑回家了。<br>压力松了一口。晚上继续打车到六道口。<br>电动车充电出现问题。40分钟后断电。<br>电池坏了？还是怎么着？ 得去修？累心的事情啊。<br>回了宿舍打两局游戏，本来快睡着了。<br>松松回来很晚，知道半夜才睡着。</p>
+<p>7.24  周五</p>
+<p>早起身体真的撑不住的累。头疼。<br>买了回家的火车票。直接从公司打车过长安街天安门上车。</p>
+<p>7.25  周六 </p>
+<p>凌晨3点多到家。早起听到父母说话，吃到一个煎饼。<br>中途手机没电了，冯来接我。<br>下午吃了饭和父聊了，就去休息了。<br>到了5点多，问了鹤迪和王港。<br>港开着一辆大众过来的，买了一盒奶。<br>聊了1个小时左右，就走了。<br>晚上，看了会儿百年孤独。 不到50页。<br>12点多睡觉。明早要带着我妈去医院复查。<br>周六下午发哥微信叫我聚聚。</p>
+<p>7.26  周日  来京半夜阵雨</p>
+<p>早起真的很困，不知道是不是鼻炎还是抽烟导致的鼻炎头疼。<br>冯来了。煎饼都没吃完，抬着我妈去医院。一上午的时间。<br>冯一直在帮忙。感谢了。上午就是很头疼。</p>
+<p>忙完中午躺了会儿，我爸买了饼和肠叫我吃饭。<br>吃了饭，就继续睡到2点多，看了会儿百年孤独，打车去找鹤迪。<br>到了深州一中的门口，变了样子。大门被铁皮包裹着。<br>从缝隙里，勉强看到里面的办公楼。</p>
+<p>HD开车接我到了他搞跨境电商的门店里，聊生意经。<br>我看着鹤迪好能说，耳垂很大。愈发的富态了。</p>
+<p>去了上次吃饭的呷哺呷哺，聊天儿。<br>之后聊我的感情和编程工作上的事。</p>
+<p>8点半了。抽了几根烟，打车走了。<br>到家他问我到没到。有点累了。</p>
+<p>在家里歇了1个多小时。我妈说我喝她的六个核桃了。<br>怎么这么小气呢？也许她习惯了用争吵来引起别人的注意。<br>这样别人注意力就会在她的身上。</p>
+<p>7.27  周一</p>
+<p>路上挺累的，补了卧铺票。到了京下雨，住公司旁边胡同酒店。<br>今天一天困困的，动机在杭州了不起的我到了。挺困的。<br>在想电动车怎么办呢？ 直接去换个电瓶？ 我才换了不到一个月啊。<br>7： 17  该回家了。</p>
+<p>7.28  周二  </p>
+<p>晚上晚走，因为来迟了。今天好像什么也没做。就是拖着。</p>
+<p>7.29  周三  </p>
+<p>去三联书店，买了本夏目漱石的书。<br>最近经常会和绍楠抽一根儿。<br>早上竟然开会迟到，欢哥点名。<br>听说公司以前有被小米收购的机会。<br>晚上呢，听他们聊天，没做自己的事情。</p>
+<p>7.30  周四</p>
+<p>连续两天喝了魔爪。感觉腰椎怎么这么疼呢？ 很不舒服。<br>身体这是怎么了呢？ 一天可以说就没怎么敲代码？<br>光思考，没有行动可不行啊。<br>现在是晚上 8：12  下午后半段，身体很差劲儿。<br>注意力不集中。涣散。9点钟走人。看会儿百年孤独吧。<br>看会儿小说，搞会儿HTML5 就下班了。</p>
+<p>身体不健康怎么导致的。腰椎真的很疼。久坐导致的？<br>是过敏性鼻炎导致的？吃药吃药。 明天周五了，要不要回家呢？</p>
+<p>这周编程有什么进步呢？没有！  一直在飘着。觉察状态，及时调整啊。</p>
+<p>电动车又像去年一样出故障了，这次更狠，直接停在了半路上。<br>充电不能用。</p>
+<p>中午午休去三联书店玩儿。打算买一本水经注。算了呢。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/日记/" rel="tag"># 日记</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/06/01/二零二零·六月/" rel="next" title="二零二零·六月">
+                <i class="fa fa-chevron-left"></i> 二零二零·六月
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/08/01/二零二零·八月/" rel="prev" title="二零二零·八月">
+                二零二零·八月 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
 
     <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+      
     </div>
   </div>
 
-{% endblock %}
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+          </div>
+          
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/uploads/avatar.png" alt="奔跑的瓦力">
+            
+              <p class="site-author-name" itemprop="name">奔跑的瓦力</p>
+              <p class="site-description motion-element" itemprop="description">简单即效率</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">53</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+    <div id="music163player">
+     <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="280" height="52" src="//music.163.com/outchain/player?type=2&id=444312&auto=1&height=32">
+     </iframe>
+    </div>
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">奔跑的瓦力</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count"></span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

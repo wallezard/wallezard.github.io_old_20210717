@@ -1,37 +1,834 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
 
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
 
-{% block page_class %}page-post-detail{% endblock %}
+  
 
 
-{% block content %}
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo,加密">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="less is more">
+<meta name="keywords" content="Hexo,加密">
+<meta property="og:type" content="article">
+<meta property="og:title" content="二零一七·十月">
+<meta property="og:url" content="https://duowangwill.github.io/2017/10/19/二零一七·十月/index.html">
+<meta property="og:site_name" content="多忘斋">
+<meta property="og:description" content="less is more">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-12-17T05:36:20.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="二零一七·十月">
+<meta name="twitter:description" content="less is more">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://duowangwill.github.io/2017/10/19/二零一七·十月/">
+
+
+
+
+
+  <title>二零一七·十月 | 多忘斋</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">多忘斋</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">less is more</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+<script>
+    (function(){
+        if('password'){
+            if (prompt('请输入文章密码') !== 'password'){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
 
   <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://duowangwill.github.io/2017/10/19/二零一七·十月/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="奔跑的瓦力">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="多忘斋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">二零一七·十月</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-19T18:00:53+08:00">
+                2017-10-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/博客/" itemprop="url" rel="index">
+                    <span itemprop="name">博客</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+              <div class="post-description">
+                  less is more
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>10.1  晴 周一</p>
+<p>3点多才睡。8点多起床和百叶去龙泉寺。听一个做义工的大姐聊一聊，禅修营的事。沟通好的话，发哥可以不来的。下午我和百叶去超市转转。吃了晚饭。他接到女友电话，就把我晾一边了。心情很不好的和佐佐打电话吐槽。</p>
+<p>10.2  阴有小雨 周一</p>
+<p>上午我忘了一个人做什么了。只记得下午发哥2点多来电话。让我过去搬东西。他和zj租好房子了。下着小雨，我过去了。把床和被褥放到了贾那里。回家，晚上去超市买了200多元吃的。和一个储物箱。和姥姥打电话聊了很多自己的事。</p>
+<p>10.3  晴 周二</p>
+<p>凌晨4点多吧，被志伟接电话吵醒。他要回家。接着我做了一个梦。我在朋友圈看到Q和别人领证了在一起了。我很不能接受这个事实。我多希望这是梦。不是现实。在梦中希望不是现实。这男的我认识，但是一点都不熟。我去找Q，她貌似在宾馆。不知道为什么一找就找到了她。我问她为什么她要选择他。她说他有电冰箱。我说我也可以有啊。然后我一路跟着她。记得不太清了。然后感觉，就成了春梦一样。她摸我的私处。然后我抱着亲她，舌吻……之后，惊醒。昨天我看到ZJ和她聊微信，让我的潜意识带入梦里了？这个电冰箱代指的是什么呢？为什么又变成了春梦？梦和现实是相反的吗？我百度了这个梦的预示，有的说：说明你很在乎他，你内心深处很依赖她，希望她和你在一起，只对你一个人好。可是你又害怕他被别人抢走，你不想失去她。在你思想强烈的矛盾和纠结之下，就做了这个梦。也有的人说，我们之间会向着好的方向发展。上午8点多就听着闹铃睡到了9点半。上午阿凡，问我要不要一起出去泡温泉还是随便走走。如果状态很想和他一起出去的，但是不想去。想Q。我买的体温计到货了。然后我刚才在不停的搜索丘的消息。我发现她觉察到我来过了。人人网设置了隐私保护。上次访问还是7.9号，那会儿也是在宿舍同样的位置。问梦瑾要不要出来，她说可以，接着又不去了。其实正好我也不想去。理发。清理微信通讯录。清理了大概10来个僵尸。偶然遇到一个知乎上曾经加过的妹子，就顺便聊了两句。有个妹子还是去年我从石家庄回衡水火车途中遇到的。当时她加了我的微信。我当时从石家庄回衡水，那天人特别挤。想起了去年的十月一是在石家庄出差呢。上厕所，蹲了半天。看了会儿qq空间，我为什么要去看之前的东西呢？真是好感伤啊。晚上，大概7点多了。去白庙村找贾。吃了点饭。以向他道歉的名义。把一些Q的记录要了一些回来。他也明白。和Q聊两句。她还在找房租房。发了张拍她的照片。</p>
+<p>10.4   中秋   八月十五</p>
+<p>上午去圆明园，中午3点多去永泰庄碳烤羊腿。给Q打电话9分钟。她说她同学昨天和今天约她出去也没去。简单聊了下自己的现状。也许是因为她能接我电话聊了会儿，下午状态稍好一些。之后去五彩城，看羞羞的铁拳。回宿舍后状态还不错。9点多给我爸打个电话聊到10点多。说了一些没用的。我看到一张截图，当时泉劝我的话。给他发了一个中秋快乐。结果他拉着我强行聊了1个多小时。我很不情愿，又不好意思拒绝。</p>
+<p>10.5</p>
+<p>上午刷鞋。十几双鞋，扔了好几双。一直没有穿的，二手鞋。佐佐世勇他们去奥森玩了。我刷完鞋，下午2点多才去巴沟找他们。一起去植物园，心好累。没有了能量。去曹雪芹故居那边，碰到一个演讲的搞中医叫祁营洲的人。然后，去上地华联吃海底捞，喝酒。然后回家。</p>
+<p>10.6</p>
+<p>7点多就醒了，看到微信群Q发了消息。起床去河边散步。然后到北体大跑步3公里。和李宗磊打电话聊天直到下午1点多。他去找Q聊，并把聊天截图给我看。然后我开始收拾整理杂物。上午和柳柳约好了时间。5点开始咨询到6点半，长达一个半小时。她说这种把聊天截图保存起来的仪式感，不要这样做。晚上的时候，忍不住去问Q房子找好没有。她把和郑健的截图给我看。发了一些牢骚。我也一直在问世勇该怎么回复在群里。然后我出门透透气。然后熊老板给我打电话问我工作上的事情。然后去麦当劳吃点，走着回宿舍，睡觉。</p>
+<p>10.7</p>
+<p>早上9点半，一醒来就很压抑很难受。和柳柳老师预约时间。下午1点和她聊了半个小时。反复提到的有：百度正念呼吸法。脚踏实地，背有依靠。开始呼吸。生命是一条单行道。不要对之前的所做的事情，再次做评价。当时那样做，就是最好的选择。得失心不要太重，不要看重结果。告诉自己没有那么糟糕。心是一个容器，有容量。把一些倒掉，其他的才有空间进来。我用Mac语音聊，然后用手机录音了。下午出来一起和佐佐他们KFC怼代码。晚上去五彩城KTV唱歌。直到4点多才回家。</p>
+<p>10.8  雨</p>
+<p>下午2点左右。我刚把和Q的所有聊天记录看了一遍。就是收到她发来的微信。问我，你在上地……<br>我还在想着要不要买一个移动电源送她。再看微信，她告诉我不要过去了，下雨天不要乱跑。<br>我披上雨衣，戴上帽子就出发了。我要去。我知道这样很冲动。但我还是要去。她即使走了。我也要过去。她说我来了，没人陪我。我不在乎这个，我过去是要陪她。或者说，我就是要去见她。</p>
+<p>到了平西府村口，打电话。她在永辉超市等我。我骑着电车从她身后过去。然后停下车一起去超市里避雨。她告诉我说，考拉腿伤住院了。我把一次性雨衣撕烂。她说要不去买一个雨衣。进超市买了两杯奶茶。我想叫着她去旁边那家咖啡店去和喝杯咖啡奶茶的，她犹豫了下，我没有强求。她请的我。去超市，她说附近到地铁也要20多分钟，附近没有off单车。不是那么方便。没买到雨衣。出来，上楼梯的时候，我痴痴看着她。她说你别老看着我。扭过头去。我看到了墙上关晓彤的广告，问她说你知道今天的娱乐新闻吗，鹿晗和她好上了。她的脸顿时多云转晴的焕发出神采来，拿起手机开始搜索信息。一边还嘟囔这，我觉着她们不太合适呀。是不是最近有什么电影做的宣传？我忽然谈到了李雨桐的实锤的话题。偏移了。然后走出了超市，她说自己不习惯别人打伞。一起往前走着，问了我其他同学的现状。数落了我的一些说错话的时候。去买完雨衣，她就去等公交了。公交上简单聊两句。不知道她和谁看的羞羞的铁锤。不适合问吧。确实也没有太好的话题聊。到了地铁，她说假期结束了，什么也没干。我说放假前还想着复习好多东西，结果什么都看不下去，她一笑。进了地铁，过安检，她刷卡进站，头也不回的走了。我从楼梯口向下，望去。她在低着头，望向她要去的15号线。我走出地铁口，和百叶打着电话，走着走到了爱前端教室这里。王前程也在呢。和他聊了下丘。就走了。Q问我到家没，我说还没有，又聊了两句。我去超市那里登上去，拍了张照片给她看了看。她也问了两句。有些冷，就去驴肉火烧那里吃了点。骑车回家。我还问了下郑健，搞得我怕他抢了Q似的。哈哈哈。回了家，和Q说了，她告诉我早点休息，才7点半。。</p>
+<p>10.9   周一</p>
+<p>凯近乎是手把手的教了一个redux是怎么写的。心情稍微舒畅。小龙来电话，原来那天Q上了车，去跟小龙聊天了。来了好久，回了宿舍还微信通话耽误了很久，不然可以早睡的。</p>
+<p>10.10  周二  阴天</p>
+<p>下午出发去天津盘山。车上和Jack聊了男女之间的事情。路上遇到一辆废弃的车挡住了路。之后入住所谓的山寨别墅。之后，开始团建项目小组讨论，然后讲述各种故事，我把自己的事分享给了清，少，萱。他们听了竟然很开心啊。说我是祥林嫂。然后吃饭，然后开始做游戏。然后开始听着alxe将一些事情。然后没时间了。分小组当裁判。然后睡觉。没啥。挺困挺累的。</p>
+<p>10.11   周三</p>
+<p>早起爬山。分小组。总之心情不好。各种找地点拍照。大家都累了。我编辑了半天照片发了朋友圈，Q点了赞。7点多回宿舍。忘了是几点睡觉的。</p>
+<p>10.12   周四</p>
+<p>凯让我实现一个功能，不停减少难度，最后发现我基本JS基础都太差。最后我和凯哥摊牌了。<br>决定去找老大面谈一下。个人状态水平和去留的问题。<br>我说我们没有一点可能吗？<br>她说，同学情深似海，且行且珍惜。<br>我找鹤迪聊天，问这些事情。他也都一一回复我了。<br>3点多才睡着吧。</p>
+<p>10.13  周五</p>
+<p>上午预约北医三院没有预约上。预约了明天上午去广渠门康复中心。<br>中午和春秀姐打了个电话，聊自己。和小龙的姐姐，聊这件事。和佐佐电话聊。<br>分别和莫大木木催债。莫大回复再等等。被教主拉近了一个讨债群，都是被木木借过钱的人。教主借了7000元。我和教主通了一个电话，聊了30多分钟吧。然后大家下午又要开始开会，听魏佳他们分享自己过去的经历，为什么加入ihealth。然后散会了，6点半就撤了。走的最早的一次。凯让我敲一遍React的TODOlist案例。回去先吃了个盖饭，接着就去和柳柳老师咨询了。然后8点多了。和我爸打了个电话。他去石家庄了。我妈今天也来了个电话，聊了两句。她状态还好。</p>
+<p>10.14  周六  阴有小雨</p>
+<p>上午10点多才出发。地铁人很多。到了广渠门已经12点多，他们在吃午饭。一直在等着。约莫2点多。<br>开始检查，其实就是用手捏了捏，腿部的各个部位，问疼不疼。教了两个热身拉伸的动作。我的跑步姿势这里确实有问题。如果要进行康复治疗，要花钱花大钱。算了吧。300元就已经很不值了。就是知道了一些部位的名字。和佐佐打了个电话，去田老师吃了饭，就回家了。路过立水桥，想去找百叶，想想还是算了。路上很累，头很痛。有点晕车的感觉，手机也没电了。到了家状态稍好。开始看过去的日记，开始反思一些事情。我给佐佐打了电话。打了1个多小时的电话，谈自己的这段学习经历和过程。百叶叫我明天去买鞋，我说有事就先不去了。</p>
+<p>10.15  周日</p>
+<p>觉着，最好的那些，都来自偶然或意外。<br>昨晚又是过了凌晨睡的。<br>早上被憋醒了。上午去了好几趟厕所。为什么没怎么喝水也会流失这么多水分呢？<br>在床上躺着佐佐来了几个电话，谈下午几点出来吃饭。他要去修电脑。<br>小龙直接跟我微信视频。他在帮高泉搬家，叫我也过去。他们很开心，我心里很舒服啊。<br>我很烦很困也很累，不想过去。对于他们，我有些盛情难却的感觉。我告诉他们状态很差，拒绝了。<br>在床上躺着看熊猫app里的电影和电视剧。下午1点多才起床。洗个澡，然后打几个字聊两句微信就快4点了。<br>时间过得挺快。先去KFC，佐佐指导我写点名小案例。买了翅桶和四个冰淇淋。<br>就去眉州东坡吃饭了，上了菜才知道，外婆家那么多人排队是有原因的。<br>我感觉有些不舒服，就出去转了转。胃里有些难受，有些大脑缺氧头疼很困倦。大概20来分钟。<br>才回去，聊了聊明天该说什么话，排练了几遍。之后去优衣库，看了看衣服，有个加长的羽绒服不错。<br>双十一可以买哈哈。9点半送走佐佐回宿舍。继续补记这些内容。现在马上就12点了。<br>还有相当一部分内容，没有写上呢。</p>
+<p>10.16  周一</p>
+<p>昨晚日记写到12点多。然后看直播到1点多才睡过去。<br>上午很困不想起床。洗个澡。喝杯咖啡。上午和冯联系问挂号的一些问题。<br>中午回宿舍歇一会儿。北体大的校医室抽空去看看。1点回公司。下午4点多。和老大聊了自己的想法。他的意见是可以去外边看看其他机会。我并没有请求给机会。也许是他的态度很明确了。我又不能拿出自己的能力来。他给我宽限到了10月25号。也就是工资发放的截止日。很平静的说，我如果去面试就告诉他一声。并且在这个时间段可以多向大家学一些东西。当初选我，是看好我的主动性。对我的预期值挺高的。我并没有选择给自己争取机会。自己的信心不足吧。机会都是给又准备的人。我告诉了凯哥。<br>下了班，先去吃了碗板面。下班回家。简单收拾下屋子。给子厚打个电话。聊聊。他说他明天考科四。<br>最近找工作一直发愁。说那天去找兼职遇到我的同事武松了。说我跑马拉松。他和武松说我是他发小。<br>我就找武松发qq问了问。之后，打个半小时的电话。聊了聊各自的现状。他们很忙。经常出差去外包。<br>佐佐来电话聊了10来分钟。他意思也是最近先歇歇。调整下。给自己3天左右的时间。回到宿舍，和冯聊了好长时间。大概1个多小时。看电视剧人民的名义，不想睡觉。这个要好好反省。是因为白天喝咖啡？还是放松了。早睡的意识太差了？还是褪黑素不起作用。保证充足睡眠！！！还是会想Q。躺下了也不想睡，看炉石直播。3点多才睡吧。</p>
+<p>10.17 周二</p>
+<p>上午迟到3分钟。冯来电话帮我推荐工作。他姐给了一个京东的Excel表都是招聘的太远了。<br>看到微信上积水潭一家医院有个号可以约，犹豫了下就没了。眼疾手快约上就对了。现在不是太困。<br>该复习一些基础内容了。上午看了半天北医三院如何就诊的问题，过去排队拿号还是网上尝试预约。<br>10：46  上班1个小时了。已经去和郭拓打了招呼了。去北医三院的话，带着医保卡？或者提前1天挂号。3天上午去面试？</p>
+<p>10：51</p>
+<p>妙味JS基础课<br>React的Todolist<br>算法题<br>面试题<br>hexo网站搭建</p>
+<p>2：31<br>中午去小米食堂吃了饭，玩炉石。回宿舍玩到1点多，看电视剧。</p>
+<p>6：18<br>下午继续搞hexo博客。下午继续搞hexo博客。改完用户名上传到github上去了。<br>域名解析出现了新问题。我妈来电话说她要开始找个工作了。晚上掉了几个雨点。<br>先去旁边的田老师吃了个饭，玩了两把炉石，和佐佐打了个点哈，就回家了。让奥定帮忙把床卖掉。<br>会了宿舍，看人名的名义和炉石直播。耽搁了一两个小时，8点多。躺床上继续看春哥炉石直播。<br>看人名的名义。。松松回了宿舍。也没聊几句。志伟没回来。躺在床上听歌。听音乐心情放松，是暂时的刺激。听到一个叫快男焦迈奇的翻唱五月天挺好听的。忽然想分享给Q。和她轻松愉快的聊聊一起喜欢的歌。还是会想她。她今天在群里分享了自己参加部门组织的年会。后来又发了张合影。穿着靴子和礼服。很开心。那首五月天的《听不到》真是符合我的心境。<br>你还是 温柔 给我 婉转的距离……</p>
+<p>12点京医通上预约积水潭运动创伤科，因为忘记医保账号，错过预约的机会。大致是1点多睡的？为什么有没有早睡的意识呢？10点多时候干嘛去了？</p>
+<p>10.18 周三  阴有小雨</p>
+<p>上午醒了，外边在下着小雨。犹豫了下要不要去公司，有些困。有想了想还是和老大请了一上午的假说去面试。下午到公司。差不多11点多，起床上厕所。心情抑郁。想她。然后补日记。看人民的名义，煮速冻饺吃。3点多去公司。和我爸打个电话，他刚躺了会起来了。和阿泉说了自己离职的情况。要不要去他们公司呢？他来了一个电话后，就又说公司暂时不招人了。之后佐佐给我一个任务写移动端的静态页面。从6点多一直写到晚上10点5分钟。实际写了3个小时左右。下班回家了。下午喝了一杯咖啡。回家。<br>偶尔会看到Q评论其他人的朋友圈。写完那个静态页面。被佐佐说了几句。有点承受不了。心想我也算用心去做了，为什么不能给我一些鼓励和肯定呢？回了宿舍，泡方便面朝吃，情绪不太好。和松松说不到一块去。看斗鱼直播玩炉石。1点多才睡去。</p>
+<p>10.19 周四 晴</p>
+<p>上午起床后，和佐佐微信聊了两句说听了他的评价自己心情不太好。中午玩炉石，回宿舍休息到下午3点多才去公司。珠峰那个妹子跟我介绍个妹子。哈。和佐佐打电话。我妈来电话了，让我去问张毅家孩子入的教育险什么的，好烦啊。我就跟爸爸说了声，让他看着我妈一点。下午看小米的招聘信息，好多部门招人呢。美好的工作，让我燃起了新的憧憬和希望。下午继续搞hexo。好慢。然后6点多佐佐来电话聊。和冯微信聊天。回宿舍7点多，看斗鱼直播。吃瓜子，煮速冻饺。松松回来了和他聊了聊。差不多10点了。看少林足球，看到12点多了。又是1点多睡的？我重新启用了微信运动，里边可以看到Q每天行走的步数。还是想她。她已经差不多快半个月没有发朋友圈了。可是我要承认自己的失败，接受自己的失败。可以的。</p>
+<p>10.20 周五 晴</p>
+<p>早上醒来，任由闹钟每隔10分钟响一次，就是不愿意起，困。到了9点多，索性不去公司也不向领导到招呼了。躺下去接着睡。今晚能10点前入睡吗？10点多起床洗个澡。看到Q在群里发了个双十一淘宝的活动扫码。去年双十一还在石家庄的如家宾馆里住着呢。忍不住拿起手机要看看那会儿在做啥？去年这会儿和教主来北京一起聚餐了。莫大还钱3000元。截止目前可流动资金 48877 10月工资还没发。赶紧资金回笼吧。<br>现在11：10了，关关帮我充值食堂饭卡。马上就要去公司了。我是想写什么来着？忘了。要赶过去吃饭了。然后一会儿还得回来。对了，我又梦见Q了。梦见下了课，我跟着她出门，登科在路口等着她。她买了两根雪糕。之后和他一起走了。没理我。我跟着他们，她好像发现了。</p>
+<p>双十一：<br>买件优衣库长身羽绒服<br>买件皮夹克<br>买条黑色牛仔裤<br>买双李宁板鞋<br>买双篮球鞋<br>买件风衣</p>
+<p>下午快5点才去公司。下班前照旧和佐佐通了电话。去小米食堂吃了饭。松松来电话，说自己没带钥匙要我尽快给他开门。回家后，把他送到地铁口。回来继续进行日志迁移。还剩下7，9，10月的。<br>9点半佐佐来电话。聊了1个多小时。12点左右入睡的。</p>
+<p>10.21 周六 阴</p>
+<p>早上被闹钟吵醒。继续睡到9点多，想她。看她微信运动步数，起的挺早。是起床洗衣服了吗？然后中午左右出去吃了饭。回宿舍继续歇着，步数到现在5点都没变化过。凤姐发微信问我关于入职的一些事。小龙和阿泉分别问我出不出来。我不去。昨天和默默聊到微信运动。她说我想她了，可以给她去点个赞，还给我分享了一个文章。我举着不要打草惊蛇的好，就默默关注且祝福着不是也挺好吗。为什么非要去惊扰呢？我是担心她会屏蔽我吗？也许是吧。冲了一杯牛奶和咖啡就去北体大跑步了。一直在密切关注着微信运动里她的动态和自己的动态。想占领封面。让她注意到我。想发个朋友圈让她注意到我。缓和一下双方之间的尴尬。<br>下午跑了10K，回来喝瓶红牛。买了串糖葫芦。接着又去跑了10k。又去上地华联买了两瓶酸奶和水。看到自己占领了60多个人的封面。在超市歇了会儿。走着回家。继续整理日记。终于还剩今天的就完结了。现在是6：23  有些和她联系的冲动，到现在她的步数还没变化。7点多出去吃了饭。心情有些压抑。膝盖这里开始疼了。没法跑太远。到了北体大跑了3公里，就停下来散步了。和我爸打了50分钟电话。和小龙打了1个小时。心情忽然好转了，很舒畅。到家都10点20了。她给我点赞了。今天步数是41000步。现在马上就11点了。11点了，和默默微信聊两句。外边下雨了，我的宝矿力还在车篓里吗？去拿。该睡觉了。</p>
+<p>10.22  晴  【黄牌警告】</p>
+<p>凌晨看乱七八糟的东西，没控制住。破戒。3点多才睡。<br>上午9点多醒了，不愿起床，连续破戒。一大滩遗在毛巾上。<br>想她。除了压力大会破戒，身体虚弱的时候也会。<br>昨天太累了。而且喝了一罐红牛。有刺激性作用？<br>保持了21天了，中断。可惜了。永远不要灰心丧气，要有信心和希望。<br>看微信运动排行版，Q的动态到现在4：42 都没变化。<br>也许她在屋子里活动吧。我怎么看待我喜欢多人，她就怎么看待我。<br>下午2点多才起床。洗个澡。磨蹭一会儿。马上要去接小龙了。</p>
+<p>和小龙去沃尔玛买了很多吃的回家煮速冻饺。<br>看爸爸去哪儿，感觉吴尊的女儿很懂事很可爱。<br>小龙一直在跟我介绍陈奕迅的歌听。谈到了Q。<br>那天情人节Q找她聊天来着。说不是自己喜欢的人送的。<br>公司里有人想约她出去吃饭呀什么的。又聊了Q的很多事。<br>东西太多吃不下去。聊到大概都9点多，送他去地铁口。<br>嗑瓜子搓炉石看直播，松松回宿舍。玩炉石。3点左右才睡。</p>
+<p>10.23  周一  晴</p>
+<p>上午困，不想去上班。请假。<br>佐佐来电话聊了几句，让我尽快调整状态找工作。<br>11点多起床。洗碗洗头，简单收拾下，就2点多了。</p>
+<p>12点半  Q发消息说，我想问你个事。<br>每当觉得自己撑不下去了<br>无法完成需求的时候<br>你是如何坚持下来的？<br>现在群里好几个小伙伴<br>包括都有这种感觉<br>恰好正和百叶聊天。问了他也问了莫大。<br>最后是自己想了20来分钟回的。<br>提取关键词<br>孤独感、精神紧绷、无力感、内心崩溃、怀疑人生、不会放松、好累、悲观</p>
+<p>2点多到了公司。也没做什么冲了一杯牛奶咖啡。<br>2个小时过去了。现在马上5点了。还什么都没做。<br>目前要做的就是，重新搞定简历。<br>5点半佐佐来电话。一起去外婆家吃饭聊天。状态还可以。<br>晚上10点左右，Q在群里说自己难受。我马上就到家了。买了个灯泡。<br>接着就去知乎上百度如何安慰人最有效果。<br>11点多，我私聊Q。给了她推荐了网易严选的一款抱枕。到了句晚安。<br>安上了，然后听他们在群里聊了半天。就插了一句。觉着说什么好呢？<br>很快2个小时过去了，12点多了。</p>
+<p>10.24 周二</p>
+<p>中午吃饭，有些上火吃下去。回宿舍破戒。<br>开始投简历了。回应寥寥。心态很受挫。<br>小米的几个部门投了几家。原本担心的根本没用。<br>因为小米、创新工场这些公司暂时都没有理会我。<br>只有一个小米的技术经理，让我发了一份简历给他。<br>下午在公司过的挺快。很快就下班了。继续投了几份简历。<br>回了宿舍，破戒。看炉石直播。松松回家了。<br>珠峰妹联系我微信聊语音聊了半小时。她跟我吐槽工作。<br>有问我有没有跟她介绍的那个妹子联系，抓住机会。<br>9点多快10点了，才去跑步。跑完了回家，11点多。<br>Q的步数仍旧没有变化。我发了朋友圈。走回宿舍。<br>路上在犹豫，要不要主动联系下她，她应该在加班还没回家。<br>右腿膝盖开始疼痛。12点多才看见她的步数变化了。<br>给她点了个赞。12点20多的时候，她评论了百叶的回复。<br>我问她说，还不快睡。等洗澡回来，看到 00：47 她回复我说刚加完班。<br>1点多，我问了句，休息没，感觉太晚了，紧接着又道了句晚安。<br>感觉自己画蛇添足了，我可以在朋友圈继续回复，让她尽快休息就好了。<br>单独私信显得自己特别在乎她。也有些打扰。欠考虑了。<br>我问冯，看到我发的动态，有没有感受到我是个坚韧的人。<br>他说不用看朋友圈，也知道我是个坚毅的人。</p>
+<p>10.25 周三  阴天</p>
+<p>做了个梦。梦到我去Q屋子里去了，一个屋子两张床。<br>具体还说了好多，我忘了说了什么。</p>
+<p>早起，发现相册video后破戒。上午左膝盖没有大碍，反而右膝盖好疼。<br>艰难起床去公司，迟到已经不重要了。人事说，忘了给我带来那本书，之后快递给我。<br>上午拷贝Mac资料到移动硬盘。接到一个面试通知。我不太想去。明天要和百叶一起去积水潭。<br>中午去食堂吃饭，把饭卡的钱用尽买了酸奶。和武松说了下关于食品管理系统的事儿。<br>然后把昨天的日记补上了。现在是1：12 回宿舍待会儿去。</p>
+<p>1点20多到宿舍，和佐佐电话，松松在休息。<br>最近半个月每天都会和佐佐至少同一个电话。<br>上厕所，松松去上班，躺床上破J。然后起床看炉石直播。<br>3:46 回公司  侯萌叫我办手续。<br>4:11  在公司刚吃了个苹果。<br>hexo用WiFi无法访问，数据流量才可以。不知道为什么。<br>3点多，知乎HR要我简历，用qq邮箱发给她。<br>4：32 开始办离职手续。<br>除了各种签字，就剩下交接使用的设备。<br>整个流程比入职顺畅多了。很快。<br>我买了两盒烟分别给了齐琳和蒋凯。<br>然后把Mac恢复出厂设置。<br>办起来其实可以很快。<br>我拖的节奏却很慢。<br>直到6点多才走完程序。<br>8.9~10.25 两个月零16天。<br>晚上吃了饭，和佐佐通话。<br>他建议我尽快去面试工作。<br>我和他说了自己的不舍和惋惜。<br>如果当时不主动去找凯哥挨着坐。<br>会不会更好呢？这样他就不会说我了。<br>我压力也许不会太大。就不会去找老大谈话。<br>回了宿舍。打开小米笔记本。竟然想着玩游戏放松下。<br>下载了炉石，玩起来植物大战僵尸。之后把冒泡排序终于搞懂了。<br>一看手机，Q微信上找我。问我跑步的时候想什么？快十点的时候。<br>我当时竟然想着先发个练字的状态，再去回复她。<br>问了莫大，该怎么回复。延迟了1个小时，直到11点多才回复她。<br>她同时也在群里聊了两句。看起来状态好些了。<br>简单聊了两句。很晚了。我问你下班回家没有。她说洗漱完毕，碎觉。晚安。<br>我说晚安。当她想找我聊的时候，我觉着自己应该跟上节奏的。<br>我的回复，有些太滞后了，不连贯。虽然没说错什么。</p>
+<p>10.26  第1天 周四</p>
+<p>现在是11：36<br>上午睡到10点多才起床，洗澡。<br>差点以为Q的微信运动屏蔽了我。还在。<br>简单收拾下看病准备的东西，打开电脑补记一下昨天的记录。<br>很快就12点了。现在出发12点开始坐地铁。<br>1点之前能到。走着到积水潭医院。<br>到了有点饿，吃麦当劳赶过去。<br>新街口拆迁了好多店铺，没来得及细看。<br>这个路口曾经和小刚去后海的时候经过无数次。<br>想不到今天竟是就医而来。<br>进医院取号，找到就诊室，等待叫号。<br>百叶赶来，聊几句。等了几个人，进去就诊。<br>可以预见到的结果，没有卵用。<br>需带着拍好的核磁共振来检查。<br>说这么啰嗦干什么呢？<br>逛五彩城。打炉石，吃烤鸭，聊Q，散伙儿。<br>回宿舍微信主动联系，Q有没有回家。<br>主动关心了一下，她回复：<br>哈哈哈，我不喜欢听这些。谢谢。<br>之后谈了两句看膝盖的情况。结束。<br>问鹤迪关于她的回复，被怼了几句。<br>晚睡。</p>
+<p>10.27  第2天  周五</p>
+<p>上午忘记了。<br>下午去面试。魏公村。之后顺道去中关村另一家公司面试。<br>第一家面试情况糟糕。第二家状态稍好。问了一些常遇到的问题。<br>http 请求<br>html5 新特性<br>斐波那契数列<br>深度克隆对象<br>React  生命周期<br>Redux闭环<br>最后还手写了一个冒泡排序。<br>和小刚打了一个电话聊了聊。<br>可以预见到去和一个说话直接的人聊天。情绪很容易受影响。<br>去五彩城眉州小吃。佐佐他们聊工作很起劲。我很失落和难过。<br>放弃了之前的工作。如果是没有主动去说，是不是就会猥琐发育下去呢？<br>国庆8天都没有把状态调节好。有些悔。<br>心情压抑难过，找鹤迪聊天。他怼了很多。<br>他告诉我让我认清现实。找准自己的定位。<br>规划好。就算Q同意和我在一起了，我有没有时间陪她呢？<br>触动很大。搞了半天hexo，没有成功。都没有心情玩炉石了。<br>自己靠什么立足呢？</p>
+<p>10.28  周六</p>
+<p>00:50 洗完澡<br>1:00 ~ 15:00  hexo 多机更新  玩炉石<br>15:00 ~ 16:00  玩全民K歌<br>16:00 ~ 17:00 收拾下想出去玩了把炉石<br>之后看春光灿烂猪八戒，玩炉石。出去了一趟，看到阴天就没出门。上午Q分享老大爷跑步的新闻给我看。说有劲儿。我延迟了好久才回复。都是莫大帮忙。她是给我机会？不会的。理智告诉我，她就是主动分享一个新闻给我而已。我是不是可以趁此约出来，一起放松放松呢？因为昨晚hd的那些话，让我不想再去这么做了。就没有继续聊下去。聊天的最后她回复了三个字：哈哈哈。为此，我还去百度哈的字数和对方心情的关系。哈哈哈。还是会关注Q的微信运动步数。今天她没出门。晚上晚睡。</p>
+<p>10.29  周日  </p>
+<p> 天气很好。中午才起床。Q出远门了。13000多步数。下午就一直玩炉石，看电视剧春光灿烂猪八戒。直到晚上7点多才出门。去北体大操场跑了1公里，右腿膝盖这里感觉很疼。和小龙打个电话聊两句。就去上地华联买东西去了。去路口吃个盖饭。回宿舍继续玩炉石了。晚睡。哈哈哈。明天有面试，我竟然这么作。</p>
+<p>10.30  周一</p>
+<p>昨晚3点晚睡。上午起不来，告知JJ比赛推迟到明天下午。下午去朝阳门面试。想不到时隔多年，还能回到这个地方。以前在日坛当保安就来这。熟悉的感觉。云脑科技这家公司环境不错。面试的问题，偏向于一些原理。先去上机做了一个算法题。返回接近字符的下标的一个题。boostrap实现的原理，面向对象，es6，箭头函数this指向这些。挺专业的。面完打着炉石回上地。吃个鸡排。回宿舍。回了宿舍，继续玩炉石。真没出息呀。今天面试感觉好多东西都忘了。new运算符执行发生了什么？</p>
+<p>10.31  周二</p>
+<p>上午太困了。推迟了规格投资的面试到明天下午。下午喝牛奶咖啡。然后整理了笔记本文件夹。然后快2点了，出去散散步。听着歌散步，效果不好。太燥了。回宿舍，赶紧洗个澡，快3点了。赶紧答应简历去JJ竞技世界面试。我不太喜欢这家公司的工作环境。不知道为什么自己这么挑剔。两道笔试题，一个是斐波那契数列。一个是函数的科里化。然后两轮面试，最后和人事聊。算是忽悠过了。谈的薪资是16K。不喜欢这个环境，可能去了也没信心胜任，不想去。现在是晚上7点半。我刚到家。现在是8点40 一个小时的时间，补全了日记。坑。要积极乐观呀。要放轻松啊。暂时先这样吧。去和佐佐打个电话。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/10/19/二零一七·九月/" rel="next" title="二零一七·九月">
+                <i class="fa fa-chevron-left"></i> 二零一七·九月
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/10/19/厦门流水账/" rel="prev" title="厦门流水账">
+                厦门流水账 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
 
     <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+      
     </div>
   </div>
 
-{% endblock %}
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+          </div>
+          
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/uploads/avatar.png" alt="奔跑的瓦力">
+            
+              <p class="site-author-name" itemprop="name">奔跑的瓦力</p>
+              <p class="site-description motion-element" itemprop="description">简单即效率</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">53</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+    <div id="music163player">
+     <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="280" height="52" src="//music.163.com/outchain/player?type=2&id=444312&auto=1&height=32">
+     </iframe>
+    </div>
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">奔跑的瓦力</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count"></span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,37 +1,818 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
 
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
 
-{% block page_class %}page-post-detail{% endblock %}
+  
 
 
-{% block content %}
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo,加密">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="六月记录">
+<meta name="keywords" content="Hexo,加密">
+<meta property="og:type" content="article">
+<meta property="og:title" content="二零一七·六月">
+<meta property="og:url" content="https://duowangwill.github.io/2017/10/19/二零一七·六月/index.html">
+<meta property="og:site_name" content="多忘斋">
+<meta property="og:description" content="六月记录">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-10-21T14:35:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="二零一七·六月">
+<meta name="twitter:description" content="六月记录">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://duowangwill.github.io/2017/10/19/二零一七·六月/">
+
+
+
+
+
+  <title>二零一七·六月 | 多忘斋</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">多忘斋</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">less is more</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+<script>
+    (function(){
+        if('password'){
+            if (prompt('请输入文章密码') !== 'password'){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
 
   <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://duowangwill.github.io/2017/10/19/二零一七·六月/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="奔跑的瓦力">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="多忘斋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">二零一七·六月</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-19T17:59:27+08:00">
+                2017-10-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/博客/" itemprop="url" rel="index">
+                    <span itemprop="name">博客</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+              <div class="post-description">
+                  六月记录
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>【6.2  canvas第4天 消消乐（下）】</p>
+<p>昨晚明明睡了很久，可还是很困。<br>昨晚睡觉并不晚。白天一整天的状态不是很好。还是没有休息好。我发现吃了褪黑素，会嗜睡。睡不够。中午回宿舍，洗了几件衣服。然后让床上看手机没有休息。下午尤其差，有些困倦。晚上拖堂到7点多。去吃饭。然后在教室门口，聊天。下下食。忽然感觉很寂寞啊。晚上分心走神了。接收和面对，然后融解和内化。从9点多开始照着敲那个拼图游戏。敲到一般，邱过来，分心。然后继续分心。其实应该早早回宿舍的，因为本来就很困的。早点回来现在已经睡着了。现在是2：16。然后找同学扯淡。我其实更想找邱聊会儿。发哥说今晚不回来了。教室通宵。要把打飞机的游戏搞定再说。12点到了，我还不明所以的逗留在教室。扯淡。好蛋疼啊。现在2:20  感觉时间过得好快。看到他们代码写的有模有样。真是有些心慌。自己很有差距啊。可是自己也很不错啦。这么尽力在跟着。和自己比。回了宿舍，和李百晔聊了几句。现在是2:23  该睡觉了。觉睡够。</p>
+<p>睡前三句话：<br>正因为不安，才更要无条件的认可自己。<br>所有的平静与你同在。<br>必要的东西，“已经拥有”。</p>
+<p>【6.5】</p>
+<p>5.26 ~ 6.4   NodeJS第1天</p>
+<p>10天 canvas   2个游戏结束了<br>前天在教室通宵了。最后拼图游戏无果。爱前端又开新班了。晚上6点多和程菲吴森简单去多彩公寓那边简单吃了饭。回宿舍。太困了。睡到11点多。发哥敲门，才醒了。睡不着，吃了片褪黑素。听着橙子学院结构力睡过去的。最近一个月微信朋友圈看的太频繁。停掉。说停就停。早上醒了下，接着睡，8点半才开始起床。<br>NodeJS开始了。中午没回宿舍，上了趟厕所。回到教室就1点20了。整理了下电脑桌面。复习了上午内容。下午一直紧跟着再听。6点30之后下课的。去吃饭。然后感觉肠胃消化不太好。碰到李百晔。扯淡。他说刚开始看觉着我很厉害很成熟。等一接触的多了感觉也就那样……嗯 这。拔高自己是没有用的。<br>整个晚自习没敲代码。9点20往回走。看世乒赛，马龙和樊振东打得还是挺刺激的。不到10点结束的。然后发了条朋友圈先感慨下，感觉没啥意思，不如删掉吧。就删掉了，为什么心里删不掉这个说说呢。我在意这个东西干嘛？想刷存在感又担心被忽视吗？<br>22:41 发哥还没有回来。一个人还是很清静的。昨天我妈说自己最近一个月状态不好。要腾出时间来和她聊下。<br>洗个澡。敲下今天的笔记。补习下正则，补习下get和post请求。基本上是这样。最后敲3遍今天的核心案例。<br>3天之内不看朋友圈<br>尽量不看手机和微信<br>睡好<br>对时间要敏感，对自己状态要敏感。</p>
+<p>【6.6  NodeJS第2天】</p>
+<p>1天3包咖啡 这两天有小雨<br>现在 19:50  4点之间入睡的。早上很困。中午冒着雨回宿舍没睡着。下午听课走神，1天喝了3包咖啡了。和我妈发了短信，建议她在老家找个活儿。有人知乎上花了10元付费咨询，暑假去海底打工的事。联系了星杰，他也在昌平。而且还成了人力资源总监助理！<br>19:53<br>1小时的时间 复习今天讲的内容。听视频。看笔记。算是没有没费掉。晚上早点睡觉。23:35   自习的时候又有知乎的人加我好友。呵呵了。然后大概是10点40回的宿舍。现在是23:39了，差不多1个小时的工夫。没有想好做什么？帮着李宗磊传资料搞了一会儿。<br>明天高考……芸芸菲菲上大学了都？ 23:43</p>
+<p>【6.7 NodeJS 2天后的休息日】</p>
+<p>喝了2包咖啡。<br>昨天晚上和Q聊天。关于心理压力和学习压力的事情。以为啥不参加游戏项目为话题开始。聊了大概半小时？2点多睡觉。早上10点多醒。11点多起床。12点多出门吃午饭。等饭玩炉石。去教室1点多了。然后去溜达一会儿。回来2点多了。开始复习NodeJS。看笔记。中间歇歇停停，一度想叫上Q去五彩城外婆家吃饭。差不多5点开始就在抉择这件事。还是复习笔记要紧。大概18点多，J下课叫我去吃饭。就此算了。然后6点半开始到7点半差不多1个多小时，休息了。不到8点，开始继续复习NodeJS笔记。复习了一会儿，就开始听歌了。9点多继续看视频。终于把昨天最后一段理清楚搞明白了。就剩下最后自己背着手敲一遍了。现在是23:21。20分中的时间把剩下的最后一段代码敲完。很想跑10k、20k、30k……  双腿伤到了，没法跑。23:22<br>变量的暴露 module.exports<br>node_module 文件夹<br>npm  依赖安装和管理<br>express 框架<br>ejs模板引擎<br>23:25</p>
+<p>【NodeJS 第3天】</p>
+<p>昨晚睡得晚，今天靠着咖啡勉强支撑。其实是有些累。中午没有回宿舍。下午讲完课，听到邵老师和Q谈到不要有太大压力，可以给助教职位……他给了多少人双保险啊？然后和郑健和Q和香香一起去驴肉火烧吃饭。扯淡。（据说助教给开12000呢！）话多。然后门口休息会儿。7点半回教室。复习MVC案例。然后动手敲。挺快1个小时就过去了。有个路由的路径没写对。找了半天bug。之后没多大的心情写下去了。想睡就睡呗。你容易受到别人的影响。你担心自己不如别人。你会很留意Q的举动，心里惦念着Q。尽管你给自己的借口是想多接触，多聊聊，一起去玩，去放松。你不可避免的又想到邪恶的方向。以敲代码为重。你会敏感敏锐的关注Q。你的心里很阻塞，无法执行回调函数。异步的函数无法return，需要借助callback作为形参，来返回结果。你变得一根筋了。你开始担心说出约会的请求被拒绝。你开始变得小心翼翼又故意虚张声势。你一直因为学编程，在拿着自己和别人对比。你总觉得有些人学得比你好，智商比你高。可是你也一直在紧跟着。就算更多的时候是在原地踏步，就算有些时候，确实自己怂了。可你总是在想办法攻克一些头疼的问题。比如，睡眠。比如，喝咖啡提神。你买了4种咖啡专门用来提神醒脑，让自己坚持听下去。你做的已经很好了。你该停下来，干脆就让自己歇歇脚。不学了。暂停一下。真正的让悬着的心放松下来。告诉自己，其实一直没有放弃自己。一直相信着自己。自己其实挺牛逼的。<br>坚定的告诉自己吧。我很优秀。而且一直优秀。我无条件的认可自己。认可自己的方方面面。现在就很好。每天都在学新的知识。在充电。我看到了在学校那个要强的自己。但是不同了，现在的我只会更牛逼，更强大。<br>10分钟的时间复习下笔记内容。然后睡觉了。<br>0:50</p>
+<p>【6.11  NodeJS 第4天 休息日】</p>
+<p>没hold住。好好反省。今天没喝咖啡哦！<br>仍旧是2点左右睡觉。中午回宿舍没有睡着。下午讲 迷你学生管理系统，听崩了。前后开工。面向对象分页导航，DOM事件……拖堂到7点多。<br>晚上吃了饭，去找高泉打了台球。然后回教室。去找韩杰和Q聊天。之后10点40，和Q去散步。我认为聊了JAD也不是不可以。就是聊了，怎么着了。显得自己很啰嗦了，怎么着了？我就这样。而且感觉还不错。大概聊到了，12点30了。送Q回宿舍，然后回家。发哥还没睡。3点多才睡着。<br>中午起床，发哥请吃烤鱼。然后现在是14:41。他在睡觉休息。我就不敲键盘了。我也睡一会儿。然后玩炉石。15:31的时候来到了教室。<br>干脆从这里记录：<br>15:31 - 16:00 听歌 做准备工作。<br>16:00 - 17:13 出去转一遭<br>看了没多一会儿，和郑健去吃饭，然后去超市买酸奶。现在是20:08。当前的状态不好。笨笨竟然自己会上车。来到教室的5个小时过去了。开始看代码……<br>然后看不下去找贾奥丁去跑步。跑了5公里不跑了。回教室。干嘛非要给人家一根冰棍呢？哈哈。买了两个手环给芸芸菲菲。看了会儿代码，并没有敲一行代码。11点多回家的。我发现很在意别人在不在意自己。不求被重视，不怕被忽视。断舍离。<br>每天欢乐听课就行了。回了宿舍洗澡，一会儿就0:37了。不说了，有些蛋蛋的忧伤。</p>
+<p>【6.13  NodeJS第5、6天】</p>
+<p>约妹失败怎么啦？<br>前3天都是3点之后睡觉的。连续看了英雄本色1、2。<br>这两天NodeJS讲的案例，逻辑线很长。甚至有些地方真听不下去了。而且睡的很晚。<br>先说昨天。昨天中午没吃饭直接回宿舍。1:20多开始眯着。后来算是睡着了。还做了一个梦。梦见爬上了很高的窗口，很危险……下午考拉一直讲到晚上9点多。Q发微信要邵老师的分页导航的视频。下课后，发哥叫我一起去吃饭聊天。没想到是好多人。接着熊老板过来了。喝完酒去KTV唱歌。一通乱吼呗。熊老板还加了我微信。哈哈。果然是有魅力啊！3点多回去的。睡到上午10点多醒了。看了会儿NBA总决赛最后一小段。计划着约上Q去外边散散心，顺便到五彩城的外婆家吃个饭。爽歪歪呀。微信里说了，她好像确实没兴趣。单纯说自己不舒服。回绝了。然后我先去分别跟我爸和佐佐打了个电话，缓冲。打电话跟Q说，要不要出去玩。她在教室里。总之，就是不去。我没有说明白，我只代表我自己。是我的名义想要约她出去玩。和其他人毛关系没有。我没有说清楚，讲明白……<br>所以临时决定不去教室，老子今天回朱房睡去。<br>16:00 回了宿舍，楼下的破电动车被清走了。帮发哥去小米之家买了一盒电池。<br>至于前天。好多事情想不起来了。我总结了一些语录，后来还被小雅转发了。然后考拉还知道了……  前天和Q聊了两句，没有多聊。但是我的回复明显多余了。直接说贴心就完了。夹杂这么的废话干嘛呢？ 试试看能不能录屏幕。<br>16:39 体重132公斤  瘦了10斤？还要瘦到125才好吧。我决定把语录补一补。然后睡一小觉，然后再睡一大觉。<br>志伟回来后，感觉挺饿的。去吃了个饭。回来骑电车去河边兜风。8点多才回来。微信上找Q搭讪。帮我找下鼠标是不是在教室。然后发红包买酸奶喝。实在找不到更好的办法了。心情很低落啊。今天1天没敲代码。。。。。刚才整理了所有的笔记。<br>我想找一个女朋友给她世界最好的温柔………怎么能这样呢？</p>
+<p>【6.15  AngularJS 第1天】</p>
+<p>因为一点烂事儿，下午听bu下课去了。<br>上午很早就醒了。骑车到教室。买了煎饼还没吃完。上午还能听进去。下午彻听蹦了。上课认真听讲是第一条守则。下午求教莫大支招。给他说明了情况。他强调了下，不要交浅言深。然后晚上没吃多少东西，胃口不太好。和高泉去打台球。7点半回教室。做了会儿笔记。忍不住微信问了下Q，要不要拷给她视频看看。她说行。我带过去了。和韩杰聊。顺便过去搭讪了几句。她让看她手机短信验证问题。一天天杂念好多啊。整个下午和晚上硬是没有沉下心来。晚上Q倒数第三个走的。和百晔聊了会儿。凌晨了回宿舍。回来和发哥聊一会儿。现在是1:53  莫大说你可以自己找一些有趣的事情分享。<br>AngularJS 明早要好好看看案例。<br>先这么多吧。压力来了。</p>
+<p>【6.16  AngularJS第2天】</p>
+<p>逻辑合理远远不等于逻辑可行。从不安躁动到渐进平复。<br>最近半个月的状态是：习惯性晚睡、依靠咖啡强撑、中午没调整好、下午节奏跟不上。听课效率差。晚自习利用不起来。<br>一个反省：那天和Q出来散步，她讲完了她的大致经历。她想听下我的经历。我反而没有随口叨叨我的。说了别人……  多少谈谈自己。简略的谈，部分可以谈细节。比方说，一个人刚来北京孤单辛苦，骑着电车送报纸。走遍了西城区的大街小巷。经常去后海玩儿。问她去没去过后海……然后要不要一起去后海玩…… 套路说来就来。什么植物园，自己去北京玩过的地方说个遍。好吃的好玩的，随便谈。而且都是自己亲身经历过的。谈外婆家的饭菜可口，有没有兴趣一起去……太多内容可以说……<br>中午发微信问她，考拉拍着她肩膀，跟她说了什么？她延迟到下午上课前才回复说，这个男人不能嫁！去。我回复了一句，考拉凭什么说我不能嫁。之后，就没有下文了。<br>然后我在梦瑾的微信里参加了小游戏，回复了<strong><em>**</em></strong>。她微信私聊我。说她在海淀。我正上课。说回头聊。之后，就没有下文了。<br>下午下了课，去超市买酸奶。打算着晚自习或许可以给Q一瓶。不过她10点多就走了。酸奶买回来，去打台球。打完9点了。王乾成也过去了。上午拿着天龙八部的背景音乐给考拉适配。哈哈哈。<br>好几天没敲代码了。我妈又发短信给我……我截图给我爸。<br>晚上喝一杯咖啡。提神之后看笔记和视频。记笔记。还问了下吴森一个问题。12点多回宿舍。没按照先前的计划。被延迟推后了。<br>高泉还是很好玩的。在群里发红包说请我喝可乐……哈哈哈。<br>至于其它细节就是一直在关注Q了举动了吧……不知道我的心思和意图有没有暴露给她。她觉察到也好觉察不到也好，我做了自己想做的。<br>中午回来了下载了一中午的歌。上午下午也一直在放歌。<br>晚自习开始学习前看了眼那本魔鬼搭讪里边讲的东西，很好玩。很能直达内心。<br>明天我打算最早一个到教室，最晚一个离开。</p>
+<p>【6.16 AngularJS 休息1天】</p>
+<p>及时刹车…… J计划 清零 从头再来。推倒重建，推倒重建。<br>凌晨4点多，我一醒，就射了。当我意识到的时候，来不及做任何阻止。已经全都射出来了。是我梦遗了？可是为什么被惊醒呢？白天想Q导致的？坚持了100多天，就这样告败了？起来的时候，发哥还没睡觉。上了趟厕所，然后换了新内裤。心里很不安。上午醒了，但是太困不想去教室。睡到11点多。又做了个梦，梦到我和落落在小沈的评论下怼起来了。而且我说的话还挺伤人。我还专门问了徐冉老师对于这件事的看法。他告诉我这就是正常的遗精，不妨碍坚持JXY。偶尔一次没有关系的。就算从头开始又怎么样呢？<br>12点多到的教室。Q是2点多来的。4:36的时候问她要不要一起去打台球。她不去。然后问了下要不要去中戏附件吃驴肉火烧。我说了自己的一些经历。有些刹不住车。之后幸好饭店停了下电。她去付钱。我才住嘴了。之后去超市买了一瓶口香糖。继续不刹车。她也说了下她现在的状况。如果留下来邵老师会给她开8K的底薪。好像她在犹豫………超市买了瓶口香糖。就回教室了。心情有些难以平复。不知道该怎么表述。并没有那种刚刚好的感觉。觉着自己说的太多了。但至少表达了自己。也许我还不错！<br>对自己强调一遍，听课效率和注意作息时间。一会儿看1小时的视频。然后回家。<br>J计划从头再来了。不用有任何忧心的想法。别怂，就是干！</p>
+<p>【6.17 好简单】</p>
+<p>好简单，好简单啊！<br>有两件事让我无法入眠：<br>惊醒后的遗精快射<br>和Q晚饭时的聊天<br>发哥还在敲代码用功学习。我一个人在床上躺着。屋里的灯光太刺眼。真的睡不着。这不怪发哥。脑子里还在回想着晚上吃饭时说过的那些话。有些言语太过细节，可以一带而过。当时却展开表达……  全程没能及时觉察Q的情绪。为什么不再简化条理化一些呢？为什么不能及时刹车呢？<br>这次，我要让自己看着自己放下。把执念放下。把那种渴求和异性亲密接触的目光转移投放到代码上。不求了，求来的都是烦恼。放下纠缠。怎么开心怎么来。怎么轻松怎么来。<br>对于Q的执念，到此为止。<br>好简单，好简单啊。<br>碎觉。。。。。</p>
+<p>【6.19 Angular第3、4天】</p>
+<p>换座位，过生日喝酒。微信没回复。流鼻血。<br>刚刚流鼻血了。印象中来白庙这边住后就没流过。身体虚？是那天遗精引起的，还是最近肠胃不舒服。喝了两顿啤酒导致的？<br>Q评论了我的朋友圈。提醒自己，不要去关注她的一举一动。专心听课敲代码就好了。晚自习先是吃完饭，最近几天吃的最多的一次。和阿泉打了半小时台球。上自习，试探性发一条动态。看视频，看进去了。到10点30.回宿舍。微信群闲聊总结学习痛点。流鼻血……0:36<br>忘了说下午下了会儿雨。另外。618淘宝买了几件背心。<br>昨天Q换座位挨着王宇坐了。1天都他妈没认真听课。然后晚上和程香去吃饭。心情很低落。正好高泉一直在群里发起生日聚餐邀请。借此拿着香香开了玩笑。然后和Q说了心里话。把心里话当玩笑话说出去……<br>我叫上她带着她过去了。然后百晔和贾奥丁也过去了。挨着坐的。什么我们家彦祖，也叫的出来。我是不信的，真要是心里有想法。都是羞于启齿的吧。至少含蓄些。我其实发挥的也不是很好，挨着很近。机会很多，却无从下手。我当时为啥不说玩笑式的表个白呢？好多事情都没想到啊。蛋糕被抹了一头。Q不去唱歌，我也就不去了。回家，发了几条信息。她回复的不太积极吧。沟通交流的技巧……至于贾奥丁我就不和他一般见识了。<br>Angular过去4天了，还有30个教学日。<br>我做什么事，也是太专一了。不能同时想着两件事。不知道明天会怎么样。先去冲个澡，然后尽快睡觉。</p>
+<p>【6.20  Angular第5天前的休息】</p>
+<p>一天的浮躁<br>上午11点多起。<br>12点多到教室的。然后Q已经在教室了。先去找凤姐搭讪了几句。其实没好意思直接过去找Q。然后私信她，<br>我：“阿媚，头发竖起来好美啊，晚上我可以请你去吃饭吗？”<br>Q：“我待会儿要去理发+表情……”<br>我：“说的我也想去理发，不过我这几根毛再剪就成灯泡了。。。”<br>我：“如果方便，吃饭叫上我啊……”<br>Q：“我回来估计要八九点了……”<br>我说，“我陪你去呀”<br>Q：“你好好学习吧”<br>卧槽啊……<br>莫大说我还是太着急了。要先缓一缓。<br>别没事找事的跟她聊就行。<br>有比较好玩的话题或者自己编的的出段子再聊。去编一些段子，编不会就去知乎找。用一些有趣的东西去打动她。<br>女人就像影子，追的越紧，跑的越快。<br>开始的时候接近的越多，越容易被看破缺点，因为这个时候没有多少感情；你又不是帅的跟吴彦祖一样，她会比较客观的看待你的好坏。听过情人眼里出西施吧，当她对你有一些感觉的时候，再猛攻，这个时候即使你有些小错误，缺陷也会被原谅和无视。<br>所以，最好的时机，就是在她心里有一个“需要你”的印象存在。<br>保持距离，才能藏拙。适时的展现自己的魅力。才能吸引她找你。交流是相互的，单向的追求结果往往无限趋近于0的结果。<br>然后，下午还是看了会儿视频的。<br>出去转了一遭。回来碰到发哥和王宇在门口抽烟。然后Q从后门骑了车子走了。<br>5点多的时候。刚要开始学习。邵就招呼我们先去吃饭，新老师要试讲。<br>吃饭，打台球。然后快7点多了。去办公室问了一个问题。<br>和我妈打电话，我真是没办法说话。说什么都是错的。没法说话啊。好累。<br>之后和我爸打电话，和佐佐打电话。谈了谈着几件事。<br>微信上和鹤迪说要他的毕业证模板，他一直没有回复……<br>然后听歌……  12点多回宿舍。啥都没干。项目起步那里没有看下去。<br>今天发生的一切，我都只想骂人啊。<br>我想试试7天之内不去找她聊天，完全沉浸在学习中。而且我会多次核实的。<br>好的，我就好好学习吧。<br>My Baby Grand ~ぬくもりが欲しくて~   zard的这首歌才被发现。</p>
+<p>【6.22  AngularJS第5天】</p>
+<p>下午不上课，有雨。【桂林请喝1瓶魔爪饮料】<br>昨天12点半睡觉的。<br>深睡时间不长。上午听课走神。第1天零交流。<br>中午的时候Q一个人去吃饭。回宿舍故意碰个面互相没有交流。眼镜架到货了。还算可以。下午装修太吵停课。和李佰晔聊天。从3点多聊到7点多。最后好像都分不清是在聊那个M了。然后微信求助楠姐。根据我的描述，得到解答是没戏。最后又说，真诚一些就好。冠希那边得到的结果是王宇对Q没兴趣。感情很多时候真诚就好，毕竟女孩子都会希望和真心的人在一起。冠希和Q的反馈是提到王宇就不说话了。按兵不动，说话的时候自然一些。晚上和发哥一起去吃饭69元，我喝了两瓶。没吃什么饭。回来聊了聊微信。也没做什么。明天要换教室。<br>不要刻意，按兵不动，如果时机成熟，顺势而为？<br>你好好学习吧。</p>
+<p>【6.22 Angular第6天】</p>
+<p>不管什么时候，我一直都在。<br>不想打扰到你。我知道你最近压力大。放轻松一些。<br>我们一起加油。不管什么时候，我一直都在。</p>
+<p>给Q发的最后一条微信。楠姐帮我想的。幸好，他帮我阻止了一些自认为不错的做法。<br>不知道她有没有认真读完几句话，只知道她很快就回复了三个加油的表情。<br>发了几张好玩的图片，她回复了个笑脸。<br>成熟稳重不是说有就有的，我就这样啊，干嘛非要拔高自己？刚刚我妈打电话，我实在有些累，不想回复。不知道该怎么和我妈说话了。<br>莫大说，还有泡妞的事慢慢来，阅历多了，自身会散发一份淡定从容。到时候自然有妹子倒贴。我很开心。<br>中午在桂林的车里睡觉。中午和晚上都和Q一起去吃饭了。中午是去的三鲜面馆还是什么地方。还几个人去的。下午下雨，一起去巴适小面，去吃面条。世勇还过来了。之后打着伞回教室。然后，没有送成Q回家。想通过五月天的歌来搭讪，一冷一热。问楠姐和莫大。关于要不要发偷拍的给她。被制止。落落写了文，我打赏了20元。然后她找我聊了两句。<br>今天换了教室，坐在了最后一排。就在Q后边。然后索性一天都没有听课。晚上8点左右回来的。洗完澡开始聊的微信。<br>我妈暂时让我爸来管，我真的有些累，先休息下。先解决好自己的问题。<br>至于明天要不要继续在后边挨着坐呢？不知道了，先睡觉吧。<br>外面的雨还在下…… 发哥睡着了。我也睡了。。。。。。</p>
+<p>【6.24  ES6、Webpack和Bable】</p>
+<p>下着雨，颠沛流离在3个教室听React的日子。<br>不知道现在外边是不是还在下雨。今天一直在喝咖啡挺着……<br>昨晚睡觉早。早起还是困。下着小雨去教室迟到了。又换到另一个教室去了。我做到前边去了。王宇和我说，给我让出了位置，怎么不做后边……上午开始讲ES6。中午和丞相去黄焖豆腐吃饭。李宗磊和桂林也在。中午没有休息，大号完了，就差不多开始提前上课。继续讲一些react之前的内容。朋友圈，我看到Q分享了一首五月天的《终于结束的起点》，我没看见就睡了。下午抽了几根烟。到了晚上和丞相去吃饭。Q一个人去吃了。回来了，忘了做了些什么…… 对了，是去跑了一圈。下雨么，一些人提前都走了。我抽了两根烟，想着手抄一遍笔记，梳理下脉络。然后发给Q。希望有帮助？</p>
+<p>李佰晔看到我抽烟，劝我说，你看她对你的态度。你应该放一些帅的照片放到朋友圈。等待下她的评论。吸引下别人来和你聊天……他还亲自证明给我看了。可是我的帅，还需要发自拍来证明吗？然后，他刚刚说看看Q对你的状态，就知道一些事情了。11点左右，Q就过来了，还轻轻用手抓着我的鸭舌帽沿晃了晃……这反而让我不太明白了。简单交流了一下，今天听课的状态。我也说了几句话。这几句话，其实没有表达的很到位。应该把重心放她的学习状态上。另外，我也下意识的遮住了自己手抄的笔记。说了几句，她说自己要走了，我走不走。。。。楠姐说的那句起作用了？不管什么时候，我一直都在。莫大也认可了这句话。说我说话水平忽高忽低。笑话植入的很突然。昨天忘了记录，他还钱了。好像班里一伙儿人还要换房子住，因为要拆迁的缘故。发哥要催我走了。2点多了。回头再补。</p>
+<p>【6.25  React 第1天前的休息】</p>
+<p>凑近了Q一整个下午。<br>上午11点多起床，帮高泉搬家。从11点多到下午4点半终于结束。挺累的。<br>到教室，基本都在凑近Q。晚上一起去巴适小面吃饭。她也学不是对跑步感兴趣，而是为了照顾我的话题。饭钱又是她付的。散步1圈。不太在状态。她一直说，变得憔悴了。她说不喜欢套路，要简单直接一点。。我也没说出啥安慰人的话。晚上没吃下饭去。下午浮躁。就算是看了一部分内容吧。Q在预习React。其实她懂好多。心里特别清楚。好想有一颗大心脏。她可以给我倾诉她的一切啊。下了晚自习，她还去关照下牛加浩。回家被延时了半个多小时。给她发了几句微信也是爱搭不理。赶紧睡觉了。我说我不太会说话。她说真诚就好。</p>
+<p>【6.26 React第1天】</p>
+<p>买了支花送妹子，被拒收。<br>3包咖啡撑过了React第1天。<br>中午回宿舍，迷糊了会儿就去上课了。换教室。<br>下午下了一点雨。<br>晚上叫Q一起去中戏旁边驴肉馆吃饭。<br>称体重，57公斤。<br>话不多。我要了份炒饼。她要了个火烧+紫菜汤。<br>吃完，我转账给她。<br>没说啥。<br>她出门口说没吃饱。去超市买了一袋饼干。<br>说不喜欢别人非要为了什么事适应她。<br>超市门口有卖花的，3块钱买了一支玫瑰。<br>她说，你不要给我买，我不要。<br>我当然买了，然后给她。她拒绝。<br>我把花找了个电动三轮，插上去了。<br>她递给我饼干吃。我吃了两块。<br>她胃口真好啊。<br>然后，说了句10分饱。<br>我一路玩手机，没话说。<br>回教室，搬到原教室座位。<br>她发了条微信： 我是不是说错什么话了？<br>回复：没有，放宽心，安心学习。<br>没有后话。<br>她之后发朋友圈，给我没有任何关系。<br>回教室9点多，才静下心来复习笔记敲代码。<br>我妈来了一个电话，她没事儿，家里没事儿就好。<br>和小龙王伟搭配回家。今天结束。</p>
+<p>【6.28  ReactJS第2天和休息日】</p>
+<p>做个预示未来的梦吧。<br>刚刚心情不太好。发哥再给Q讲题。我刚才过去看了下，怎么没有主动去给她看看呢？<br>出去抽了两根烟。头晕晕的，胸口还有些恶心。<br>昨晚上玩植物大战僵尸到4点。<br>第二天竟然挺过来了。<br>在贾奥丁班里上课。考拉的讲课状态很好。<br>下午，Q发微信说，黑咖啡很苦，问我有没有糖包。<br>我说，有冰糖粉。<br>她又说，下次再喝黑咖啡，求打赏一包冰糖粉。然后一个吐舌头的可爱表情。我简单回复了一个OK。<br>昨天的那支拒收的玫瑰至少让我明白，她不讨厌我。可是不讨厌和有感觉和有兴趣是不一样的。这没用。<br>昨天她发了一个状态。看不清本质，你没资格说你懂了。个中深意，只有她自己清楚吧。<br>李佰晔，一天没来听课。不想多么八卦点赞事件。晚上10点多，看到Q和XX跑步。<br>张敏有意向学前端，聊了几句。<br>陈军涛来北京找工作了。<br>送巧巧回家，之后带着李佰晔聊天。聊到2点多。在超市那里。我那天和Q去散步，关于贾奥丁的一切都不该说。<br>可是这件事已经过去了，就让他过去吧。我们聊了好多。他感情是真投入的太多了。没能说上什么让他安心的话。<br>李佰晔说他做了梦，全是全家桶。。。。。。<br>如果说昨天Q对我特意好转的态度。是为了不想失去一个朋友。试探性我。给我机会，让我有希望的话。<br>那刚才她对我不冷不热的态度呢？有些累了。那会儿抽烟的晕乎劲儿 还没过去呢。趁着这个状态赶紧记录完，然后睡觉。<br>上午10点多起床的。<br>11点多就和发哥去教室了。买了盒黄鹤楼。下午，和Q聊微信，问她来不来，她3点多才来教室。<br>也是态度冷淡。总之，可以投入感情。但是仍要做自己。<br>下午还敲了几行代码，到晚自习是真敲不下去了。<br>晚上贾奥丁说，不知道为啥反感我。。。。。随便啦。。。。<br>我怎么觉着再去求教楠姐有些没有出息呢？所以，当前的情况都没有为她。<br>不能总打扰别人。 今天李佰晔来自习了一下午。<br>刚刚和Q聊了几句。就这样吧。<br>我仍是我，不需要拔高，不需要别人肯定。我喜欢的就尽力去争取，失败了就失败了。<br>吃点花生，洗把脸。睡了。做个预示未来的梦吧！关于我和Q的。</p>
+<p>【6.29  ReactJS第3天】</p>
+<p>你为什么叫多忘呀？<br>昨天的睡眠质量很差。就深睡了1个小时。上午困。喝了2包咖啡。中午换教室了。<br>悄悄在Q的桌上放了一包咖啡。她微信上说谢谢你的咖啡。下午说，一起去吃驴肉火烧。<br>她同意了。后来下课晚，她又说不去了。不知道为啥。我吃了饭回来，买了两个好丽友派给她。<br>继续献殷勤呗。呵呵。跟着李佰晔听的课。中午回宿舍不敢睡着。迷糊了一会儿。<br>下午听课有些走神。考拉状态不是太好。 身心状态慢慢回暖。<br>晚自习敲代码，后来小龙和Q一起开始研究代码，其他他们研究就可以了。我少说话就行，除非我真懂的很透彻。<br>再后来，小龙好像有些事儿要找Q开导一下。我就先走了。<br>Q看我的QQ昵称叫多忘，问我为啥叫多忘啊。我没回答，转移了话题。<br>她说我说话总是有套路，我知道我是真诚的就好了。<br>有些事情，不如去感受。感受到的就是真的呗。<br>晚自习其实没有敲完代码。遗落了个文件没有敲完。<br>Q今天对我的态度，虽然没有太冷，也就是普通朋友的语气。感觉小龙还是很呆萌的。<br>我再想明天要不要吃饭的时候，约她后天一起去外婆家吃个饭。<br>就吃个饭，11点多去，然后吃完下午就回教室，上自习。<br>不知道她去不去。她晚自习借用了我的耳机。<br>没其他的了，复习下时间冒泡和事件委托。然后敲完最后一页代码。</p>
+<p>【6.30  补ReactJS第4天】</p>
+<p>求来的都是烦恼。只管去做就好了。<br>昨天睡很晚。一天没有什么精神，喝了咖啡也一样。<br>晚上叫Q吃饭，她说不吃晚饭。拖堂到7点半，晚自习下了课。<br>我把3对黑咖啡和糖包，给了她。去找佐佐喝酒去了。<br>下课之前，我忍不住微信说了句：<br>看到你一身运动装，好想拖着受伤的膝盖带你一起去跑步。我知道她没回复。这还是看了书上的一些东西，说出去的。太纠结了，反而有些话说不利索。<br>晚上和佐佐喝酒，关于感情没有提及，只是在最后表了个态，放弃。亲自看着自己拿得起放得下。他一直在说我以学习工作为重，尽快开始准备简历找工作。提前一个月，在培训结束之前必须要先练练手，让焦虑提前到来。喝了9瓶。他说 他4月份找工作的时候，哭过。那天他跟他妈打电话的时候哭了。。。他从来没有说过。我点了几根烟给他。借的火或者对着的。<br>晚上回家12点多了。晕乎乎。但是一躺下就睡着了。<br>楠姐的一些话：</p>
+<p>好好工作多赚钱。多培养幽默感，让人家对你有意思。<br>强扭瓜不甜，如果你示好，对方无反应或者装傻充楞，你就可以明白，人家觉得你配不上。<br>如果有所回应，比如能约吃饭愿意和聊天，有一定的回应和互动，那就可以继续。<br>“每一回都是还没开始就失恋了”<br>楠姐：那你要反思，是不是自己眼光高了。而自身的价值，还未能跟上你的眼光。恋爱，一定要是相对等才能有所交流。门当户对，说的是个人的价值观一致对等。以及双方本身在社会上的被认可价值等。</p>
+<p>每一次失恋，都是你变得更好的契机。当然了，如果想恋爱了，认真恋爱结婚了。<br>那就要调整好心态，全面认清楚自己的整体情况，然后眼光适当调整<br>（这是针对你说的每次还没开始追，人家就压根没考虑你的情况）<br>当然还有一种情况就是，你没有在人家女孩子面前有所表示，人家不知道你对她有意思。</p>
+<p>所以，遇到喜欢的女孩子，不妨真诚大胆追，如果对方没回应或者拒绝了。<br>那就可以看情况坚持示好一段时间或者直接撤退另待良人了。<br>你微信那么明显了。她对你没那个意思。女孩子不会当玩笑，女孩子心里有数的。她不想伤你自尊心，已经很委婉拒绝了。</p>
+<p>我明白，你觉得他没选择你，你心里有点难过。也有些失望。觉得自己很不错。<br>但是人家却没看上，觉得自己付出真心，但人家不当一回事。这些情绪都是正常的。<br>但是，别人的拒绝不代表你不优秀。<br>其实你内心想要验证什么吧。你想听她否认吧。你觉得她很好，哥们儿说她不好。<br>你内心想求证某一些事情。蠢得无可救药啊你</p>
+<p>女性对朋友和男朋友完全两幅面孔，因为要求不同。<br>所以，和女生聊天和任何人聊天要有底线。未必说的是真话。<br>两个人在一起，只有他们知道。和你说前女友坏话，你哥们已经很low了，你好，还去转述，我服了。<br>我要是她，和你绝无可能，太尴尬。所以，你死心吧，以后朋友估计都会疏远。你以后不要触碰人家底线。<br>两个人的分分合合，只有两个人自己知道合适不合适，他们都分了，你不应该参合，还是在你只听了一方说辞不了解全部的情况下。<br>不仅作死，而且很不尊重人。你以后要注意。感情经历，其实也是隐私。</p>
+<p>玩笑和暧昧，令人讨厌就是因为这些仔细研究，可以代表什么也可以不代表什么，只能说你把自己路堵死了。<br>而她本来也没那么喜欢你。本来吧，就是不讨厌，现在就是滚一边。<br>所以啊，侧面反应你这个人八卦。这是你的缺点。男性八卦会显得浮夸，以后要改。<br>嘴贱很减分啊。假如今天一起，明天分手，你就叨逼出去，太贱啊。改掉毛病再谈吧。</p>
+<p>你欠骂，委婉的说你改不了。<br>我晒衣服去了，你好好反省。然后有意识地改改毛病。现在男多女少，老婆不是那么好追的。<br>其实感情很多时候，真诚就好，毕竟女孩子都会希望和真心的人在一起。<br>女生很讨厌别人偷拍自己（丑）的照片。<br>原则就是你拍的比她自己拍的好看。<br>你不能帮她解决问题，就不要提及她烦恼的事情。<br>有时候以同一句话，不同人说，效果不一样。<br>安慰人，要么是经验之谈，要么是同理心。你现在和她同一个起跑线，只能是同理心。但不能添堵。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/日记/" rel="tag"># 日记</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/10/19/二零一七·五月/" rel="next" title="二零一七·五月">
+                <i class="fa fa-chevron-left"></i> 二零一七·五月
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/10/19/二零一七·七月/" rel="prev" title="二零一七·七月">
+                二零一七·七月 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
 
     <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+      
     </div>
   </div>
 
-{% endblock %}
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+          </div>
+          
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/uploads/avatar.png" alt="奔跑的瓦力">
+            
+              <p class="site-author-name" itemprop="name">奔跑的瓦力</p>
+              <p class="site-description motion-element" itemprop="description">简单即效率</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">53</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+    <div id="music163player">
+     <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="280" height="52" src="//music.163.com/outchain/player?type=2&id=444312&auto=1&height=32">
+     </iframe>
+    </div>
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">奔跑的瓦力</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count"></span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,37 +1,941 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
 
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
 
-{% block page_class %}page-post-detail{% endblock %}
+  
 
 
-{% block content %}
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo,加密">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="less is more">
+<meta name="keywords" content="Hexo,加密">
+<meta property="og:type" content="article">
+<meta property="og:title" content="二零一九·MonKey">
+<meta property="og:url" content="https://duowangwill.github.io/2019/05/01/MonKey/index.html">
+<meta property="og:site_name" content="多忘斋">
+<meta property="og:description" content="less is more">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-12-16T17:47:09.797Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="二零一九·MonKey">
+<meta name="twitter:description" content="less is more">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://duowangwill.github.io/2019/05/01/MonKey/">
+
+
+
+
+
+  <title>二零一九·MonKey | 多忘斋</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">多忘斋</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">less is more</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+<script>
+    (function(){
+        if('201905'){
+            if (prompt('请输入文章密码') !== '201905'){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
 
   <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://duowangwill.github.io/2019/05/01/MonKey/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="奔跑的瓦力">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="多忘斋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">二零一九·MonKey</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-01T18:00:14+08:00">
+                2019-05-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/博客/" itemprop="url" rel="index">
+                    <span itemprop="name">博客</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+              <div class="post-description">
+                  less is more
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>财务现状:</p>
+<p>支付宝: 14665元<br>招行卡: 4469元<br>招行卡2: 48661元</p>
+<p>陌陌: 32000元</p>
+<p>67795元 + 26000 = 93795元</p>
+<p>7.5 号</p>
+<p>入职过去15天了 今天是第16天<br>最近打车花了  600多了</p>
+<p>招行     40578<br>招行     3171<br>支付宝   19556<br>公积金   48933</p>
+<p>11.2238  11万2千</p>
+<p>陌陌上3万? </p>
+<p>等陌陌到账:  就是14万2千   旅游 + MacBook Pro  2万<br>别乱花钱了.</p>
+<p>7月10号  发工资   14.7万<br>8月10号  发工资   16万<br>9月10号  发工资   17.3万<br>10月10号 发工资   18.6万<br>11月10号 发工资   20万<br>12月10号 发工资   21.3万<br>1月10号  发工资   22.6万</p>
+<p>到年底存 22.6万<br>坚持做好工作的情况下.</p>
+<p>身体现状:</p>
+<p>睡眠不好（睡太晚，作息不规律）<br>不按时吃饭（每天吃一个煮鸡蛋）<br>抽烟太多</p>
+<p>学习状况:</p>
+<p>太分散不够聚焦</p>
+<p>7.9 号</p>
+<p>入职过去15天了 今天是第16天<br>最近打车花了  600多了</p>
+<p>招行     60417<br>招行     3171<br>支付宝   19521<br>公积金   48933</p>
+<p>132042 + 5576 = 13,7500</p>
+<p>陌陌    10000 ?</p>
+<p>下个月 8.10<br>14,7500 - 3000 = 14,4500<br>14,4500 + 1,5000 = 15,9500</p>
+<p>9月   17,000? 加油<br>10月  18,3000<br>11月  19,6000<br>12月  21,0000<br>1月   22,3000</p>
+<p>2019.8.4</p>
+<p>招行        7488.42元<br>招行        477761.95元<br>公积金      48933元<br>支付宝      25142.34元<br>交通银行    5576.26元 </p>
+<p>13.4915万 [当时手里的钱]</p>
+<p>8.10号  14.5000<br>9.10号  15.5000<br>10.10号  16.5000<br>11.10号  17.5000<br>12.10号  18.5000<br>1.10号  19.5000</p>
+<p>2年时间, 攒够第一个50万</p>
+<p>8.9</p>
+<p>支付宝    25150<br>交行      19877<br>招行1     46692<br>招行2     7486<br>公积金    48933</p>
+<p>总金额: 14,8138元  +  4000(公积金)  =  152318</p>
+<p>不包含公积金  算作这个月的消费的话.<br>下个月 + 14301.15</p>
+<p>下个月9.10号  16,2439元<br>148138 + 14301 = 162439元  不算公积金</p>
+<p>下个月10.10   17,4000<br>下个月11.10   18,6000<br>下个月12.11   19,8000<br>下个月1.11    21,0000</p>
+<p>纯理想化的状态</p>
+<p>9.4  </p>
+<p>公积金 52593<br>支付宝 25128<br>招行1  7410<br>招行2  32606<br>交行   19877</p>
+<p>9.4  13.7614   目前余额<br>8.4  13.4915   [当时手里的钱]</p>
+<p>咨询费用:</p>
+<p>2019 9.3   1770    1<br>2019 9.1   2600    2<br>2019 8.21  2480    3<br>2019 8.14  1800    4<br>2019 8.11  600     5<br>2019 8.9   1710    6<br>2019 8.2   2380    7<br>2019 7.24  1340    8<br>2019 7.22  1940    9<br>2019 7.16  1060    10<br>2019 7.15  1230    11<br>2019 7.15  800 其他 </p>
+<p>19710 元</p>
+<p>如果不花这些咨询费, 现在手里有15.7000元<br>然而一个月工资花完了, 剩下13.7614<br>等9.10发工资, 13.7614 + 1.70000 = 15.4000元<br>减去房租 15.2000元  </p>
+<p>等到10.10 发工资  16.3000<br>等到11.10 放工资  17.7000<br>等到12.10 发工资  19.0000<br>等到1.10  放工资  20.3000</p>
+<p>目标是年底, 攒够20万就行了.</p>
+<p>9.10  </p>
+<p>交行        34031<br>支付宝      27276<br>招行1       27675<br>招行2       7399<br>公积金      52593</p>
+<p>14,8974 + 4080(未到账) = 15,3054</p>
+<p>10.10 预计存款</p>
+<p>下个月目标:  15,1500 + 17000 = 16,8500  16,8000</p>
+<p>11.10 预计存款</p>
+<p>16,8000 - 2000(房租) - 2000(开销) = 16,4000(结余)<br>16,4000 + 17000 = 18,1500(11月存款)</p>
+<p>12.10 预计存款</p>
+<p>18,1500 - 3000(花销) = 17,8500 + 17000 = 19,5500(12月存款)</p>
+<p>1.10 预计存款</p>
+<p>19,5500 - 2000 + 17000 = 21,0500(1月存款)</p>
+<p>2.10 预计存款</p>
+<p>21,0500 - 5000 + 17000 = 22,1500(2月存款)</p>
+<p>2019.10.10</p>
+<p>交通银行: 4,8165.9<br>支付宝: 2,6784.88<br>招行1: 7118.06<br>招行2: 2,4840.22<br>公积金: 5,6673</p>
+<p>16,3580(现金流) + 4080(公积金未到账) = 16,7660<br>16,3580(现金流)</p>
+<p>2019.11.8</p>
+<p>交通银行: 6,2639<br>支付宝: 2,1215<br>招行1: 2,1832<br>招行2: 1,1481<br>公积金: 5,6253</p>
+<p>17,3420(现金流) + 4080(公积金未到账) = 17,7500</p>
+<p>17,3420(现金流)</p>
+<p>2019.12.10</p>
+<p>30天, 预计消费: 174000  + 17000 = 191000</p>
+<p>2019.11.27</p>
+<p>公积金    6.0333<br>交行     6.2639<br>余额宝   1.7867<br>招行1    1.0988<br>招行2    2.0190</p>
+<p>17.2017 (现金流)</p>
+<p>28 29 30 1 2 3 4 5 6 7 8 9 10  13天 吃喝 800元<br>其他 杂费用 600 元</p>
+<p>170000 + 17000 = 18.7000</p>
+<p>到1月份发工资  18.3000 + 17000 = 20.0000 </p>
+<p>明年这个时候 不敢说出来 哎  </p>
+<p>2019.11.30</p>
+<p>公积金   6.0333<br>交行     6.2639<br>余额宝   1.7867<br>招行1    1.0988<br>招行2    2.0190 + 7800(社保卡)</p>
+<p>17.2017 (现金流) + 7800(社保卡)</p>
+<p>179817元 (现金流) - 1000元网易严选衣服</p>
+<p>178817 - 817(最多的近几天日常开销)</p>
+<p>17,8000元</p>
+<p>2019.11.30</p>
+<p>7,6685 交通银行<br>6,0333 公积金 (不包含12月份的 4080) 算上 6,4440<br>1,5371 余额宝<br>2,7635 招商银行 (1,0807 招行1  1,6828 招行2)</p>
+<p>18,4104元</p>
+<p>巴赫    1000 + 940 + 600 = 2540元<br>慕课网   550元<br>吃饭     400元吃饭 + 100元打车 = 500元</p>
+<p>3500元 + 7000元手机 = 10000元</p>
+<p>18,4104元 现金流</p>
+<p>到1月份发工资  18.4104 + 17000 = 20,1104<br>30天的时间: 1800元  日常开销 其他  房租 2000元 4000元</p>
+<p>1月 现金流  19.7万<br>2月 现金流  21万<br>3月 现金流  22万<br>4月 现金流  23万<br>5月 现金流  24万<br>6月 现金流  26万 (努努力, 如果还在kika工作的话)</p>
+<p>2020.1.8</p>
+<p>7,6726 交通银行<br>6,4413 公积金<br>1,1436 余额宝<br>1,6936 招商银行 (1,0480 招行1  6455 招行2)</p>
+<p>16, 9511元 (约17万) </p>
+<p>巴赫    1000 + 940 + 600 + 1200 + 600 + 970 + 600 + 1570 + 600 + 440 + 400 = 8920元<br>手机    7000 元<br>1000元的礼物<br>17000元  12月开销  咨询费 + 苹果手机</p>
+<p>2020.1.10</p>
+<p>10,9615 交通银行<br>6,4413 公积金 + 4080元 未到账 = 6,8493元<br>1,1436 余额宝<br>1,6585 招商银行 (1,0480 招行1  6455 招行2)</p>
+<p>20,6129元</p>
+<p>2020.1.13</p>
+<p>10,9615 交通银行<br>6,4413  公积金 + 4080元 未到账 = 6,8493元<br>1,1440  支付宝<br>2,2058  招行  10297 + 11751 </p>
+<p>20,7526<br>21,1606元(现金流)</p>
+<p>开销:<br>600元  游戏卡<br>124元  游戏充值<br>853元  100元手续费 + 339元去青岛 + 79元打车 + 99元 + 192元回衡水 + 44元打车 + 150元火车票</p>
+<p>2250元  </p>
+<p>3677 元</p>
+<p>2020.2.2</p>
+<p>公积金:  5, 9913 公积金 + 4080 未到账 = 63993元<br>交通银行: 10, 9615 交通银行<br>招商银行: 2, 2433 = 1, 4605 + 7827 招商银行</p>
+<p>9319 支付宝</p>
+<p>20, 5360元(现金流)  </p>
+<p>花了 6264 元</p>
+<p>支付宝: 2121元<br>招商: 4548 元</p>
+<p>4317招行1 4356元<br>0146招行2 192元</p>
+<p>游戏机 3200<br>路费住宿打车: 1000元<br>100元移动电源 + 220元TS课程</p>
+<p>6,4413  公积金 + 4080元 未到账 = 6,8493元   1.13<br>5,9913 公积金 + 4080 未到账  = 6,3993元  今天</p>
+<p>2020.2.10</p>
+<p>交通银行   12, 4055元<br>支付宝     7929元<br>公积金     6,3993元  (1月份)<br>招行      2,1730元</p>
+<p>21, 7707 元</p>
+<p>最大额度: 10+2 20万<br>每月3000元支出  攒够17万</p>
+<p>38万</p>
+<p>2020.3.3</p>
+<p>6.8073 公积金<br>12.4055 交行<br>5613  余额宝<br>17671 招行</p>
+<p>21.5412(现金)</p>
+<p>2020.3.10</p>
+<p>6.8073 公积金<br>13.8093 交行<br>1.6801<br>5615</p>
+<p>22.8582(现金) 4080 未到账  23,2662</p>
+<p>2020.3.29</p>
+<p>公积金    7,2153.49<br>招行      1,2571<br>交行      13,8177<br>支付宝    5908</p>
+<p>22.8809 元</p>
+<p>2020.4.10</p>
+<p>228000 + 14038 = 242038 + 4080 = 24.6118元</p>
+<p>5.10 发工资 26万？<br>6.10 发工资 27.5万<br>7.10 发工资 29万<br>8.10 发工资 30.6万</p>
+<p>8月份的时候  30万？？？🤩 平静一下</p>
+<p>9.10 发工资 32.1万<br>10.10 发工资 33.6万<br>11.10 发工资 35万<br>12.10 发工资 36.5万<br>2021.1.10 发工资 38万<br>2021.2.10 发工资 39.5万</p>
+<p>2020.4.10  周五（最新）</p>
+<p>交通银行 152159<br>公积金  72153.49 + 4080<br>招行   11455<br>支付宝  5492 </p>
+<p>24,5339元</p>
+<p>2020.5.9（最新）  13567</p>
+<p>交行   16,5727<br>支付宝  1212<br>招行    7412<br>公积金   76233 + 4080<br>社保卡   1433</p>
+<p>25, 6097 (现金流)</p>
+<p>下个月 6月  27,2097<br>下个月 7月  28,5000 ？<br>下个月 8月  29,7000</p>
+<p>2020.6.10</p>
+<p>交行      179180<br>公积金     75813 + 4080<br>招行       2637<br>支付宝     840<br>社保卡     1671</p>
+<p>26,4221元（现金流）</p>
+<p>以下： 5709元</p>
+<p>手机 1259元<br>补税 1477元<br>耳机 1599元<br>鼠标 + 支架 + 鼻毛清洁器 = 459元<br>理发器 300元<br>书 276 + 187 + 97 + 55 = 615元</p>
+<p>去年工作之前存款  13万<br>6月份工资 存上12000<br>一年存了14.6万</p>
+<p>6.10  26,4000<br>7.10  1.7000</p>
+<p>预估: 27.7 万<br>8.10 预估 29万<br>9.10 预估 30万</p>
+<p>6月</p>
+<p>500元  腿伤CT<br>300元  游戏卡</p>
+<p>6.22</p>
+<p>840元 网费1年</p>
+<p>7.14</p>
+<p>交通银行    18,6200<br>公积金      80837 + 4080 = 84917<br>北京银行     1910</p>
+<p>27, 3027</p>
+<p>7.24</p>
+<p>交通银行： 183234<br>公积金：   84917<br>北京银行： 1910</p>
+<p>27,0000</p>
+<p>8.16 </p>
+<p>交通银行：190853<br>公积金：80139 + 3800<br>北京银行：2148<br>现金：2000<br>招行：4516 </p>
+<p>28.3456</p>
+<p>9.10 </p>
+<p>28.3456 + 17000 = 30.0000</p>
+<p>-3000元花销  29.7000</p>
+<p>预计10.10  31.1万<br>预计11.10  32.5万<br>预计12.10  33.9万<br>预计1.10   35.2万</p>
+<p>11.10</p>
+<p>交通银行：20,0896<br>公积金：87045 + 3800<br>北京银行：2815<br>现金：2000<br>招行：3492</p>
+<p>30万现金流</p>
+<p>12.10 + 1.10</p>
+<p>12月份不用交房租<br>到1.10是 32.6万</p>
+<p>12.5 </p>
+<p>巴赫咨询费 + 陌陌币 = 6万</p>
+<p>巴赫咨询 3.2万 +<br>陌陌： 3万元 +<br>20237陌陌 + 13835刷币 = 34072元 - 4500律师费 </p>
+<p>12.5 </p>
+<p>197434 交通银行<br>2425 招行<br>3037 北京银行医保<br>90847 公积金<br>2000 现金</p>
+<p>295743元</p>
+<p>12.17</p>
+<p>交通银行  211338<br>招商招行  1498<br>北京银行  3037<br>公积金    90847<br>现金     2000</p>
+<p>30, 8720</p>
+<p>12月工资  9天 + 3.5天年假 = 12.5天 *  781元（日薪） 9762元<br>3月工资补偿  51000元 + 9762元 = 60762元</p>
+<p>60762元 + 308720元 = 36,9482元</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/日记/" rel="tag"># 日记</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/01/二零一九·五月/" rel="next" title="二零一九·五月">
+                <i class="fa fa-chevron-left"></i> 二零一九·五月
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/01/二零一九·六月/" rel="prev" title="二零一九·六月">
+                二零一九·六月 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
 
     <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+      
     </div>
   </div>
 
-{% endblock %}
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+          </div>
+          
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/uploads/avatar.png" alt="奔跑的瓦力">
+            
+              <p class="site-author-name" itemprop="name">奔跑的瓦力</p>
+              <p class="site-description motion-element" itemprop="description">简单即效率</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">53</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+    <div id="music163player">
+     <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="280" height="52" src="//music.163.com/outchain/player?type=2&id=444312&auto=1&height=32">
+     </iframe>
+    </div>
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">奔跑的瓦力</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count"></span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
